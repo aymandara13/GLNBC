@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Applications & Industries Served | Good Luck Nut Bolt Corporation</title>
+  <meta name="description" content="Explore industrial fastener, U-bolt, and clamp applications across Construction, Piping, Fabrication, Electrical, HVAC, Manufacturing, and Automotive sectors from GLNBC.">
+  
+    <link rel="icon" type="image/png" href="assets/images/brand/favicon.png">
+<link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <span><strong>Est. 1975</strong> • Fastener Applications Across 8 Industrial Sectors</span>
+      </div>
+      <div class="top-bar-right">
+        <a href="tel:9821441071">Sales: +91 98214 41071</a>
+        <span style="opacity: 0.3;">|</span>
+        <a href="locations.html">3 Mumbai Locations</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+            <a href="index.html" class="brand" aria-label="Good Luck Nut Bolt Corporation Homepage">
+        <img src="assets/images/brand/glnbc-logo.png" alt="GLNBC - Good Luck Nut Bolt Corporation" class="brand-logo-img">
+      </a>
+
+      <nav class="nav-desktop">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="industries.html" class="nav-link active">Industries</a>
+        <a href="locations.html" class="nav-link">Locations</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="request-a-quote.html" class="btn btn-primary">Request a Quote</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section-dark" style="padding: 40px 0 32px 0;">
+      <div class="container">
+        <span class="section-eyebrow">Sector Expertise</span>
+        <h1 style="color: white; font-size: clamp(1.8rem, 3vw, 2.5rem); margin-bottom: 8px;">
+          Applications & Industries We Serve
+        </h1>
+        <p style="color: var(--color-text-dim); max-width: 680px; font-size: 15px;">
+          Supplying standard and custom fastener solutions engineered for demanding engineering environments across India.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="product-grid" style="grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 28px;" id="industries-full-grid">
+          <!-- Populated by JavaScript from data/industries.js -->
+        </div>
+
+        <div class="notice-box" style="margin-top: 48px; text-align: center; padding: 28px;">
+          <h3 style="margin-bottom: 8px;">Need Fasteners for a Specialized Sector or Custom Engineering Project?</h3>
+          <p style="margin-bottom: 16px; font-size: 14px;">
+            Our technical team can discuss metallurgical requirements, proof loads, and non-standard fabrication drawings.
+          </p>
+          <a href="request-a-quote.html" class="btn btn-primary">Discuss Your Requirement</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+        <div>© 1975 – 2026 Good Luck Nut Bolt Corporation (GLNBC).</div>
+        <div>Sales: +91 98214 41071 / 88280 68873 • Mumbai, Maharashtra</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/data/company.js"></script>
+  <script src="assets/js/data/industries.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const grid = document.getElementById('industries-full-grid');
+      if (grid && typeof GLNBC_INDUSTRIES !== 'undefined') {
+        let html = '';
+        GLNBC_INDUSTRIES.forEach(ind => {
+          html += `
+            <div class="product-card" style="background: white;">
+              <div style="display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 12px;">
+                <h3 style="font-size: 18px; color: var(--color-deep-black);">${escapeHtml(ind.name)}</h3>
+              </div>
+              <p style="font-size: 14px; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 16px; flex-grow: 1;">
+                ${escapeHtml(ind.description)}
+              </p>
+              <div style="border-top: 1px solid var(--color-cool-grey-border); padding-top: 12px; margin-bottom: 16px;">
+                <span style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--color-grey-muted); letter-spacing: 0.05em; display: block; margin-bottom: 6px;">
+                  Key Products Supplied:
+                </span>
+                <div style="display: flex; flex-wrap: wrap; gap: 4px;">
+                  ${ind.keyProducts.map(p => `<span class="tag-spec">${escapeHtml(p)}</span>`).join('')}
+                </div>
+              </div>
+              <div class="product-card-actions">
+                <a href="request-a-quote.html?p=${encodeURIComponent(ind.name + ' Requirement')}" class="btn btn-sm btn-primary w-full">
+                  Request Sector Quote
+                </a>
+              </div>
+            </div>
+          `;
+        });
+        grid.innerHTML = html;
+      }
+    });
+  </script>
+</body>
+</html>
+
+

@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us & Sales Enquiries | Good Luck Nut Bolt Corporation</title>
+  <meta name="description" content="Contact Good Luck Nut Bolt Corporation. Call sales on +91 9821441071 / 8828068873, message on WhatsApp, email goodlucknutbol@gmail.com, or visit our 3 Mumbai trade counters.">
+  
+    <link rel="icon" type="image/png" href="assets/images/brand/favicon.png">
+<link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <span><strong>Est. 1975</strong> • Fastener Sales & Trade Enquiries</span>
+      </div>
+      <div class="top-bar-right">
+        <a href="tel:9821441071">Sales: +91 98214 41071</a>
+        <span style="opacity: 0.3;">|</span>
+        <a href="locations.html">3 Mumbai Locations</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+            <a href="index.html" class="brand" aria-label="Good Luck Nut Bolt Corporation Homepage">
+        <img src="assets/images/brand/glnbc-logo.png" alt="GLNBC - Good Luck Nut Bolt Corporation" class="brand-logo-img">
+      </a>
+
+      <nav class="nav-desktop">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="industries.html" class="nav-link">Industries</a>
+        <a href="locations.html" class="nav-link">Locations</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="request-a-quote.html" class="btn btn-primary">Request a Quote</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section-dark" style="padding: 40px 0 32px 0;">
+      <div class="container">
+        <span class="section-eyebrow">Direct Communications</span>
+        <h1 style="color: white; font-size: clamp(1.8rem, 3vw, 2.5rem); margin-bottom: 8px;">
+          Contact Good Luck Nut Bolt Corporation
+        </h1>
+        <p style="color: var(--color-text-dim); max-width: 680px; font-size: 15px;">
+          Connect directly with our sales team via Phone, WhatsApp, Email, or visit our physical trade counters in Mumbai.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr; gap: 40px;" class="contact-grid-layout">
+          
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+            <!-- Sales Phone -->
+            <div style="background: white; border: 1px solid var(--color-cool-grey-border); border-radius: var(--radius-md); padding: 24px;">
+              <h3 style="font-size: 18px; margin-bottom: 8px; color: var(--color-deep-black);">Direct Sales Desk</h3>
+              <p style="font-size: 13px; color: var(--color-text-muted); margin-bottom: 16px;">Speak directly with fastener sales personnel for orders & availability.</p>
+              <div style="font-size: 18px; font-weight: 700; color: var(--color-industrial-blue); margin-bottom: 4px;">
+                <a href="tel:9821441071">+91 98214 41071</a>
+              </div>
+              <div style="font-size: 16px; font-weight: 600; color: var(--color-deep-black);">
+                <a href="tel:8828068873">+91 88280 68873</a>
+              </div>
+            </div>
+
+            <!-- WhatsApp Direct -->
+            <div style="background: #F0FDF4; border: 1px solid #BBF7D0; border-radius: var(--radius-md); padding: 24px;">
+              <h3 style="font-size: 18px; margin-bottom: 8px; color: #166534;">WhatsApp Enquiries</h3>
+              <p style="font-size: 13px; color: #15803D; margin-bottom: 16px;">Fastest way to share fastener specifications, photos, and drawings.</p>
+              <button type="button" class="btn btn-whatsapp w-full" onclick="openWhatsAppQuote()">
+                Open WhatsApp (+91 98214 41071)
+              </button>
+            </div>
+
+            <!-- Email Desk -->
+            <div style="background: white; border: 1px solid var(--color-cool-grey-border); border-radius: var(--radius-md); padding: 24px;">
+              <h3 style="font-size: 18px; margin-bottom: 8px; color: var(--color-deep-black);">Official Email</h3>
+              <p style="font-size: 13px; color: var(--color-text-muted); margin-bottom: 16px;">Send formal tender enquiries, purchase orders, and CAD files.</p>
+              <div style="font-size: 16px; font-weight: 700; color: var(--color-industrial-blue);">
+                <a href="mailto:goodlucknutbol@gmail.com">goodlucknutbol@gmail.com</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Message Form -->
+          <div style="background: white; border: 1px solid var(--color-cool-grey-border); border-radius: var(--radius-lg); padding: 32px; max-width: 800px; margin: 0 auto; width: 100%;">
+            <h2 style="font-size: 22px; margin-bottom: 8px;">Send a Direct Message</h2>
+            <p style="font-size: 14px; color: var(--color-text-muted); margin-bottom: 24px;">
+              Fill in your details below and our team will get back to you promptly.
+            </p>
+
+            <form id="contact-quick-form" onsubmit="event.preventDefault(); showToast('Message sent! Our sales team will contact you shortly.', 'success'); this.reset();">
+              <div class="form-row form-row-2">
+                <div class="form-group">
+                  <label class="form-label">Your Name <span class="required">*</span></label>
+                  <input type="text" class="form-control" required placeholder="Enter full name">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Phone Number <span class="required">*</span></label>
+                  <input type="tel" class="form-control" required placeholder="e.g. 9821441071">
+                </div>
+              </div>
+
+              <div class="form-row form-row-2">
+                <div class="form-group">
+                  <label class="form-label">Email Address</label>
+                  <input type="email" class="form-control" placeholder="name@company.com">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Preferred Branch</label>
+                  <select class="form-control">
+                    <option value="main">Main Branch (Kumbharwada / Chor Bazaar)</option>
+                    <option value="traders">Good Luck Traders (Nagdevi St)</option>
+                    <option value="hardware">Good Luck Hardware (Bibijan St)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Message / Requirement Details</label>
+                <textarea class="form-control" placeholder="Describe your product requirements, size, quantity, or specific questions..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-lg btn-primary">Send Message</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+        <div>© 1975 – 2026 Good Luck Nut Bolt Corporation (GLNBC).</div>
+        <div>Sales: +91 98214 41071 / 88280 68873 • Mumbai, Maharashtra</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/data/company.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+
+

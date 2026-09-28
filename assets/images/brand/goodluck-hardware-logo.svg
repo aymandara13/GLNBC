@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 120" width="100%" height="100%">
+  <defs>
+    <linearGradient id="glh-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3A444D" />
+      <stop offset="50%" stop-color="#222831" />
+      <stop offset="100%" stop-color="#14181E" />
+    </linearGradient>
+    <linearGradient id="glh-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E6CB0" />
+      <stop offset="100%" stop-color="#0F4C81" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Minimalist Hex Nut / Bolt Monogram -->
+  <g transform="translate(15, 12)">
+    <!-- Outer Hexagon -->
+    <polygon points="48,4 88,27 88,73 48,96 8,73 8,27" fill="url(#glh-grad)" stroke="#4E5965" stroke-width="2" />
+    <!-- Inner Threaded Bore -->
+    <circle cx="48" cy="50" r="22" fill="#121417" stroke="#333A42" stroke-width="2" />
+    <!-- Geometric G-L-H Accent Facet -->
+    <polygon points="48,10 82,30 82,45 48,25" fill="url(#glh-blue)" />
+    <path d="M38,40 L58,40 M48,40 L48,62 M40,62 L56,62" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" fill="none" />
+  </g>
+
+  <!-- Typography -->
+  <text x="125" y="52" font-family="'Inter', 'Segoe UI', Arial, sans-serif" font-size="28" font-weight="900" letter-spacing="1.5" fill="#1C2025">GOOD LUCK</text>
+  <text x="125" y="80" font-family="'Inter', 'Segoe UI', Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="3" fill="#0F4C81">HARDWARE</text>
+  <text x="125" y="100" font-family="'Inter', 'Segoe UI', Arial, sans-serif" font-size="10" font-weight="600" letter-spacing="1" fill="#6B7280">INDUSTRIAL FASTENERS &amp; FIXINGS • NAGDEVI</text>
+</svg>

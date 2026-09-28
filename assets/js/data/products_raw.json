@@ -1,0 +1,470 @@
+﻿// GLNBC Product Catalogue Dataset (Generated from 41 Project Markdown Specifications)
+const GLNBC_PRODUCTS = [
+    {
+        "id":  "allen-cap-bolts",
+        "slug":  "allen-cap-bolts",
+        "name":  "Allen Cap Bolts",
+        "status":  "Primary",
+        "category":  "Fasteners",
+        "aliases":  [
+                        "Allen Bolt",
+                        "Cap Bolt"
+                    ],
+        "summary":  "[Add product-specific description.]"
+    },
+    {
+        "id":  "anchor-fasteners",
+        "slug":  "anchor-fasteners",
+        "name":  "Anchor Fasteners",
+        "status":  "Primary",
+        "category":  "Anchors",
+        "aliases":  [
+                        "Wedge Anchor",
+                        "Through Anchor",
+                        "Anchor Fastener"
+                    ],
+        "summary":  "[Add product-specific description.]"
+    },
+    {
+        "id":  "beam-clamps",
+        "slug":  "beam-clamps",
+        "name":  "Beam Clamps",
+        "status":  "Secondary",
+        "category":  "Clamps \u0026 Brackets",
+        "aliases":  [
+                        "Beam Clamp"
+                    ],
+        "summary":  "[Add product-specific description.]"
+    },
+    {
+        "id":  "bitumen-washers",
+        "slug":  "bitumen-washers",
+        "name":  "Bitumen Washers",
+        "status":  "Primary",
+        "category":  "Washers",
+        "aliases":  [
+                        "Dambar Washers"
+                    ],
+        "summary":  "[Add product-specific description.]"
+    },
+    {
+        "id":  "button-head-screws",
+        "slug":  "button-head-screws",
+        "name":  "Button Head Screws",
+        "status":  "Primary",
+        "category":  "Screws",
+        "aliases":  [
+                        "Button Head"
+                    ],
+        "summary":  "[Add product-specific description.]"
+    },
+    {
+        "id":  "cable-trays",
+        "slug":  "cable-trays",
+        "name":  "Cable Trays",
+        "status":  "Secondary",
+        "category":  "Cable Management",
+        "aliases":  [
+                        "Cable Tray"
+                    ],
+        "summary":  "[Add product-specific description.]"
+    },
+    {
+        "id":  "cage-nuts",
+        "slug":  "cage-nuts",
+        "name":  "Cage Nuts",
+        "status":  "Secondary",
+        "category":  "Nuts",
+        "aliases":  [
+                        "Cage Nut"
+                    ],
+        "summary":  "[Add product-specific description.]"
+    },
+    {
+        "id":  "c-channel-brackets",
+        "slug":  "c-channel-brackets",
+        "name":  "C-Channel Brackets / C Patti",
+        "status":  "Primary",
+        "category":  "Brackets",
+        "aliases":  [
+                        "C Patti",
+                        "C-Channel Bracket"
+                    ],
+        "summary":  "[Add product-specific description.]"
+    },
+    {
+        "id":  "csk-bolts",
+        "slug":  "csk-bolts",
+        "name":  "Countersunk Bolts",
+        "status":  "Primary",
+        "category":  "Fasteners",
+        "aliases":  [
+                        "CSK Bolts",
+                        "CSK"
+                    ],
+        "summary":  "[Add product-specific description.]"
+    },
+    {
+        "id":  "csk-screws",
+        "slug":  "csk-screws",
+        "name":  "Countersunk Screws",
+        "status":  "Primary",
+        "category":  "Screws",
+        "aliases":  [
+                        "CSK Screws",
+                        "CSK"
+                    ],
+        "summary":  "[Add product-specific description.]"
+    },
+    {
+        "id":  "eye-bolts",
+        "slug":  "eye-bolts",
+        "name":  "Eye Bolts",
+        "status":  "Primary",
+        "category":  "Fasteners",
+        "aliases":  [
+                        "Eye Bolt"
+                    ],
+        "summary":  "[Add product-specific description.]"
+    },
+    {
+        "id":  "foundation-bolts",
+        "slug":  "foundation-bolts",
+        "name":  "Foundation Bolts",
+        "status":  "Primary",
+        "category":  "Fasteners",
+        "aliases":  [
+                        "Foundation Bolt"
+                    ],
+        "summary":  "[Add product-specific description.]"
+    },
+    {
+        "id":  "hex-bolts",
+        "slug":  "hex-bolts",
+        "name":  "Hex Bolts",
+        "status":  "Primary",
+        "category":  "Fasteners",
+        "aliases":  [
+                        "Hex Bolt"
+                    ],
+        "summary":  "[Add product-specific description.]"
+    },
+    {
+        "id":  "hi-tech-clamps",
+        "slug":  "hi-tech-clamps",
+        "name":  "Hi-Tech Clamps",
+        "status":  "Primary",
+        "category":  "Clamps \u0026 Brackets",
+        "aliases":  [
+                        "Hi-Tech Clamp"
+                    ],
+        "summary":  "[Add product-specific description.]"
+    },
+    {
+        "id":  "hose-clips",
+        "slug":  "hose-clips",
+        "name":  "Hose Clips",
+        "status":  "Primary",
+        "category":  "Clamps \u0026 Brackets",
+        "aliases":  [
+                        "Hose Clip"
+                    ],
+        "summary":  "[Add product-specific description.]"
+    },
+    {
+        "id":  "j-hooks",
+        "slug":  "j-hooks",
+        "name":  "J-Hooks",
+        "status":  "Primary",
+        "category":  "Hooks \u0026 Brackets",
+        "aliases":  [
+                        "J Hook"
+                    ],
+        "summary":  "[Add product-specific description.]"
+    },
+    {
+        "id":  "l-hooks",
+        "slug":  "l-hooks",
+        "name":  "L-Hooks",
+        "status":  "Primary",
+        "category":  "Hooks \u0026 Brackets",
+        "aliases":  [
+                        "L Hook"
+                    ],
+        "summary":  "[Add product-specific description.]"
+    },
+    {
+        "id":  "lock-nuts",
+        "slug":  "lock-nuts",
+        "name":  "Lock Nuts",
+        "status":  "Secondary",
+        "category":  "Nuts",
+        "aliases":  [
+                        "Lock Nut"
+                    ],
+        "summary":  "[Add product-specific description.]"
+    },
+    {
+        "id":  "long-nuts",
+        "slug":  "long-nuts",
+        "name":  "Long Nuts",
+        "status":  "Primary",
+        "category":  "Nuts",
+        "aliases":  [
+                        "Long Nut"
+                    ],
+        "summary":  "[Add product-specific description.]"
+    },
+    {
+        "id":  "mounting-clips-clamps",
+        "slug":  "mounting-clips-clamps",
+        "name":  "Mounting Clips / Clamps",
+        "status":  "Primary",
+        "category":  "Clamps \u0026 Brackets",
+        "aliases":  [
+                        "Mounting Clip",
+                        "Mounting Clamp"
+                    ],
+        "summary":  "[Add product-specific description.]"
+    },
+    {
+        "id":  "nuts",
+        "slug":  "nuts",
+        "name":  "Nuts",
+        "status":  "Primary",
+        "category":  "Fasteners",
+        "aliases":  [
+                        "Nut"
+                    ],
+        "summary":  "[Add product-specific description.]"
+    },
+    {
+        "id":  "pin-type-anchor-fasteners",
+        "slug":  "pin-type-anchor-fasteners",
+        "name":  "Pin-Type Anchor Fasteners",
+        "status":  "Primary",
+        "category":  "Anchors",
+        "aliases":  [
+                        "Pin-Type Anchors"
+                    ],
+        "summary":  "[Add product-specific description.]"
+    },
+    {
+        "id":  "pipe-clamps",
+        "slug":  "pipe-clamps",
+        "name":  "Pipe Clamps",
+        "status":  "Primary",
+        "category":  "Clamps \u0026 Brackets",
+        "aliases":  [
+                        "Pipe Clamp"
+                    ],
+        "summary":  "[Add product-specific description.]"
+    },
+    {
+        "id":  "pp-clamps",
+        "slug":  "pp-clamps",
+        "name":  "PP Clamps",
+        "status":  "Primary",
+        "category":  "Clamps \u0026 Brackets",
+        "aliases":  [
+                        "PP Clamp"
+                    ],
+        "summary":  "[Add product-specific description.]"
+    },
+    {
+        "id":  "pvc-caps",
+        "slug":  "pvc-caps",
+        "name":  "PVC Caps",
+        "status":  "Secondary",
+        "category":  "Miscellaneous",
+        "aliases":  [
+                        "PVC Cap"
+                    ],
+        "summary":  "[Add product-specific description.]"
+    },
+    {
+        "id":  "pvc-rubber-washers",
+        "slug":  "pvc-rubber-washers",
+        "name":  "PVC Rubber Washers",
+        "status":  "Primary",
+        "category":  "Washers",
+        "aliases":  [
+                        "PVC Washer",
+                        "Rubber Washer"
+                    ],
+        "summary":  "[Add product-specific description.]"
+    },
+    {
+        "id":  "rawl-bolt-fasteners",
+        "slug":  "rawl-bolt-fasteners",
+        "name":  "Rawl Bolt Fasteners",
+        "status":  "Primary",
+        "category":  "Anchors",
+        "aliases":  [
+                        "Rawl Bolt"
+                    ],
+        "summary":  "[Add product-specific description.]"
+    },
+    {
+        "id":  "rip-lock-washers",
+        "slug":  "rip-lock-washers",
+        "name":  "Rip-Lock Washers",
+        "status":  "Secondary",
+        "category":  "Washers",
+        "aliases":  [
+                        "Rip Lock Wiser",
+                        "Rip-Lock Washer"
+                    ],
+        "summary":  "[Add product-specific description.]"
+    },
+    {
+        "id":  "rubber-pipe-clamps",
+        "slug":  "rubber-pipe-clamps",
+        "name":  "Rubber Pipe Clamps",
+        "status":  "Primary",
+        "category":  "Clamps \u0026 Brackets",
+        "aliases":  [
+                        "Rubber Clamp"
+                    ],
+        "summary":  "[Add product-specific description.]"
+    },
+    {
+        "id":  "saddle-clamps",
+        "slug":  "saddle-clamps",
+        "name":  "Saddle Clamps",
+        "status":  "Primary",
+        "category":  "Clamps \u0026 Brackets",
+        "aliases":  [
+                        "Saddle Clamp"
+                    ],
+        "summary":  "[Add product-specific description.]"
+    },
+    {
+        "id":  "screw-hooks",
+        "slug":  "screw-hooks",
+        "name":  "Screw Hooks",
+        "status":  "Primary",
+        "category":  "Hooks \u0026 Brackets",
+        "aliases":  [
+                        "Screw Hook"
+                    ],
+        "summary":  "[Add product-specific description.]"
+    },
+    {
+        "id":  "self-drilling-screws",
+        "slug":  "self-drilling-screws",
+        "name":  "Self-Drilling Screws",
+        "status":  "Primary",
+        "category":  "Screws",
+        "aliases":  [
+                        "Self Drilling Screw"
+                    ],
+        "summary":  "[Add product-specific description.]"
+    },
+    {
+        "id":  "spring-nuts",
+        "slug":  "spring-nuts",
+        "name":  "Spring Nuts",
+        "status":  "Secondary",
+        "category":  "Nuts",
+        "aliases":  [
+                        "Spring Nut"
+                    ],
+        "summary":  "[Add product-specific description.]"
+    },
+    {
+        "id":  "studs-threaded-products",
+        "slug":  "studs-threaded-products",
+        "name":  "Studs \u0026 Threaded Products",
+        "status":  "Primary",
+        "category":  "Fasteners",
+        "aliases":  [
+                        "Threaded Studs",
+                        "Threaded Rods"
+                    ],
+        "summary":  "[Add product-specific description.]"
+    },
+    {
+        "id":  "two-h-nuts",
+        "slug":  "two-h-nuts",
+        "name":  "2H Nuts",
+        "status":  "Primary",
+        "category":  "Nuts",
+        "aliases":  [
+                        "2H Nut",
+                        "B7 Nut",
+                        "B7 / 2H"
+                    ],
+        "summary":  "[Add product-specific description.]"
+    },
+    {
+        "id":  "u-bolts",
+        "slug":  "u-bolts",
+        "name":  "U-Bolts",
+        "status":  "Primary",
+        "category":  "U-Bolts \u0026 Clamps",
+        "aliases":  [
+                        "U Bolt",
+                        "U-Bolt"
+                    ],
+        "summary":  "[Add product-specific description.]"
+    },
+    {
+        "id":  "u-clamps-patti-clamps",
+        "slug":  "u-clamps-patti-clamps",
+        "name":  "U-Clamps / Patti Clamps",
+        "status":  "Primary",
+        "category":  "Clamps \u0026 Brackets",
+        "aliases":  [
+                        "U Clamp",
+                        "Patti Clamp"
+                    ],
+        "summary":  "[Add product-specific description.]"
+    },
+    {
+        "id":  "umbrella-washers",
+        "slug":  "umbrella-washers",
+        "name":  "Umbrella Washers",
+        "status":  "Secondary",
+        "category":  "Washers",
+        "aliases":  [
+                        "Umbrella Washer"
+                    ],
+        "summary":  "[Add product-specific description.]"
+    },
+    {
+        "id":  "wall-brackets",
+        "slug":  "wall-brackets",
+        "name":  "Wall Brackets",
+        "status":  "Primary",
+        "category":  "Hooks \u0026 Brackets",
+        "aliases":  [
+                        "Wall Bracket"
+                    ],
+        "summary":  "[Add product-specific description.]"
+    },
+    {
+        "id":  "wire-clamps",
+        "slug":  "wire-clamps",
+        "name":  "Wire Clamps",
+        "status":  "Secondary",
+        "category":  "Clamps \u0026 Brackets",
+        "aliases":  [
+                        "Wire Clamp"
+                    ],
+        "summary":  "[Add product-specific description.]"
+    },
+    {
+        "id":  "z-brackets",
+        "slug":  "z-brackets",
+        "name":  "Z-Brackets",
+        "status":  "Primary",
+        "category":  "Hooks \u0026 Brackets",
+        "aliases":  [
+                        "Z Bracket"
+                    ],
+        "summary":  "[Add product-specific description.]"
+    }
+];
+
+if (typeof module !== 'undefined' && module.exports) { module.exports = { GLNBC_PRODUCTS }; }

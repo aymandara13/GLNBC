@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frequently Asked Questions (FAQ) | Good Luck Nut Bolt Corporation</title>
+  <meta name="description" content="Frequently asked questions about industrial fastener specifications, custom dimensions, materials, ASTM/DIN standards, bulk discounts, and trade counter pickups at GLNBC Mumbai.">
+  
+    <link rel="icon" type="image/png" href="assets/images/brand/favicon.png">
+<link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <span><strong>Est. 1975</strong> • Fastener Technical & Commercial FAQ</span>
+      </div>
+      <div class="top-bar-right">
+        <a href="tel:9821441071">Sales: +91 98214 41071</a>
+        <span style="opacity: 0.3;">|</span>
+        <a href="locations.html">3 Mumbai Locations</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+            <a href="index.html" class="brand" aria-label="Good Luck Nut Bolt Corporation Homepage">
+        <img src="assets/images/brand/glnbc-logo.png" alt="GLNBC - Good Luck Nut Bolt Corporation" class="brand-logo-img">
+      </a>
+
+      <nav class="nav-desktop">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="industries.html" class="nav-link">Industries</a>
+        <a href="locations.html" class="nav-link">Locations</a>
+        <a href="faq.html" class="nav-link active">FAQ</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="request-a-quote.html" class="btn btn-primary">Request a Quote</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section-dark" style="padding: 40px 0 32px 0;">
+      <div class="container">
+        <span class="section-eyebrow">Technical & Commercial Support</span>
+        <h1 style="color: white; font-size: clamp(1.8rem, 3vw, 2.5rem); margin-bottom: 8px;">
+          Frequently Asked Questions
+        </h1>
+        <p style="color: var(--color-text-dim); max-width: 680px; font-size: 15px;">
+          Clear, direct answers regarding fastener dimensions, material grades, custom orders, bulk terms, and our Mumbai trade branches.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="max-width: 860px;" id="faq-root">
+        <!-- Rendered by JavaScript from data/faq.js -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+        <div>© 1975 – 2026 Good Luck Nut Bolt Corporation (GLNBC).</div>
+        <div>Sales: +91 98214 41071 / 88280 68873 • Mumbai, Maharashtra</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/data/company.js"></script>
+  <script src="assets/js/data/faq.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.getElementById('faq-root');
+      if (container && typeof GLNBC_FAQ !== 'undefined') {
+        let html = '';
+        GLNBC_FAQ.forEach(group => {
+          html += `
+            <div style="margin-bottom: 36px;">
+              <h2 style="font-size: 20px; color: var(--color-deep-black); margin-bottom: 16px; border-bottom: 2px solid var(--color-cool-grey-border); padding-bottom: 8px;">
+                ${escapeHtml(group.category)}
+              </h2>
+              <div class="accordion-group">
+                ${group.questions.map((item, idx) => `
+                  <div class="accordion ${idx === 0 && group.category === 'General & Ordering' ? 'active' : ''}">
+                    <button type="button" class="accordion-header">
+                      <span>${escapeHtml(item.q)}</span>
+                      <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="accordion-body">
+                      <div class="accordion-content" style="font-size: 14px; line-height: 1.7; color: var(--color-text-dark);">
+                        ${escapeHtml(item.a)}
+                      </div>
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          `;
+        });
+        container.innerHTML = html;
+        initAccordions();
+      }
+    });
+  </script>
+</body>
+</html>
+
+
