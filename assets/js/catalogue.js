@@ -1,10 +1,6 @@
 /**
  * GLNBC Catalogue Page Logic
- * Manages live search, category filtering, material filtering, quick-pills, verified product imagery, and systematic product grid rendering.
- * Grounded in UI Reference 3 layout and User Guidelines:
- * - Clean isolated white product photo container
- * - No explicit "Primary" / "Secondary" text badges
- * - Responsive real-time search with clear button and quick tag pills
+ * Manages live search, category filtering, multi-image card flippers, verified product imagery, and systematic product grid rendering.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -177,8 +173,18 @@ function renderCatalogue() {
     }
 
     // Category Filter
-    if (currentFilters.category !== 'all' && prod.categorySlug !== currentFilters.category) {
-      return false;
+    if (currentFilters.category !== 'all') {
+      // Direct categorySlug match
+      if (prod.categorySlug !== currentFilters.category) {
+        // Support C-Channel and Z-Brackets in Cable Management
+        if (currentFilters.category === 'cable-management' && (prod.slug === 'c-channel-brackets' || prod.slug === 'z-brackets' || prod.slug === 'spring-nuts')) {
+          // Allow match
+        } else if (currentFilters.category === 'fasteners' && (prod.categorySlug === 'fasteners' || prod.slug === 'wedge-anchor' || prod.slug === 'pin-type-anchor-fasteners' || prod.slug === 'bullet-fasteners' || prod.slug === 'rawl-anchor-fasteners')) {
+          // Allow match
+        } else {
+          return false;
+        }
+      }
     }
 
     // Material Filter
@@ -236,24 +242,37 @@ function renderCatalogue() {
   filtered.forEach(prod => {
     const isBranded = prod.visibilityTier === 'Branded' || prod.visibilityTier === 'Also Deal In';
     const firstMaterial = (prod.materials && prod.materials[0]) ? prod.materials[0] : 'Mild / Stainless Steel';
+    const allImages = [prod.heroImage, ...(prod.galleryImages || [])].filter(Boolean);
     
-    // Verified Hero Image Markup
+    // Multi-Image Flipper Arrows Markup
+    let imageArrows = '';
+    let counterMarkup = '';
+    if (allImages.length > 1) {
+      imageArrows = `
+        <button type="button" class="card-img-arrow card-img-prev" onclick="changeCardImage(event, '${prod.slug}', -1)" aria-label="Previous image">‹</button>
+        <button type="button" class="card-img-arrow card-img-next" onclick="changeCardImage(event, '${prod.slug}', 1)" aria-label="Next image">›</button>
+      `;
+      counterMarkup = `<span class="card-img-counter">1/${allImages.length}</span>`;
+    }
+
     let imageMarkup = '';
     if (prod.heroImage) {
       imageMarkup = `
-        <div class="product-card-media">
+        <div class="product-card-media" onclick="openProductPage('${prod.slug}')" title="Click to view full specifications">
           <img src="${prod.heroImage}" alt="${escapeHtml(prod.name)}" loading="lazy">
+          ${imageArrows}
+          ${counterMarkup}
         </div>
       `;
     }
 
     let brandBadge = '';
     if (isBranded) {
-      brandBadge = `<span class="badge badge-branded" style="align-self: flex-start; margin-bottom: 6px;">Branded Fastener</span>`;
+      brandBadge = `<span class="badge badge-branded" style="align-self: flex-start; margin-bottom: 6px;">Branded Line</span>`;
     }
 
     html += `
-      <article class="product-card">
+      <article class="product-card" data-product-slug="${prod.slug}">
         ${imageMarkup}
         <div class="product-card-content">
           <div class="product-card-header">
@@ -279,7 +298,7 @@ function renderCatalogue() {
 
           <div class="product-card-actions">
             <a href="product.html?p=${prod.slug}" class="btn btn-outline btn-sm">
-              Full Specifications
+              Full Specs
             </a>
             <a href="request-a-quote.html?product=${encodeURIComponent(prod.name)}" class="btn btn-primary btn-sm">
               Request Quote
@@ -291,9 +310,4 @@ function renderCatalogue() {
   });
 
   grid.innerHTML = html;
-}
-
-function escapeHtml(str) {
-  if (!str) return '';
-  return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#039;');
 }

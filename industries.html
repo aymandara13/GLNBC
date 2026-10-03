@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -6,24 +6,26 @@
   <title>Applications & Industries Served | Good Luck Nut Bolt Corporation</title>
   <meta name="description" content="Explore industrial fastener, U-bolt, and clamp applications across Construction, Piping, Fabrication, Electrical, HVAC, Manufacturing, and Automotive sectors from GLNBC.">
   
-    <link rel="icon" type="image/png" href="assets/images/brand/favicon.png">
-<link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="icon" type="image/png" href="assets/images/brand/favicon.png">
+  <link rel="stylesheet" href="assets/css/variables.css">
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/components.css">
   <link rel="stylesheet" href="assets/css/layout.css">
 </head>
-<body>
+<body class="bg-cad-steel">
 
   <!-- Top Bar -->
   <div class="top-bar">
     <div class="container top-bar-inner">
       <div class="top-bar-left">
-        <span><strong>Est. 1975</strong> • Fastener Applications Across 8 Industrial Sectors</span>
+        <span><strong>Est. 1975</strong> • Fastener Applications Across Industrial Sectors</span>
       </div>
       <div class="top-bar-right">
         <a href="tel:9821441071">Sales: +91 98214 41071</a>
         <span style="opacity: 0.3;">|</span>
         <a href="locations.html">3 Mumbai Locations</a>
+        <span style="opacity: 0.3;">|</span>
+        <a href="https://share.google/fnx7M4NKP5fzHsoLj" target="_blank" rel="noopener noreferrer" style="color: #60A5FA;">★ Google Profile</a>
       </div>
     </div>
   </div>
@@ -31,7 +33,7 @@
   <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
-            <a href="index.html" class="brand" aria-label="Good Luck Nut Bolt Corporation Homepage">
+      <a href="index.html" class="brand" aria-label="Good Luck Nut Bolt Corporation Homepage">
         <img src="assets/images/brand/glnbc-logo.png" alt="GLNBC - Good Luck Nut Bolt Corporation" class="brand-logo-img">
       </a>
 
@@ -51,8 +53,28 @@
     </div>
   </header>
 
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-overlay"></div>
+  <div class="mobile-drawer" role="dialog" aria-modal="true">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="brand" aria-label="Good Luck Nut Bolt Corporation Homepage">
+        <img src="assets/images/brand/glnbc-logo.png" alt="GLNBC - Good Luck Nut Bolt Corporation" class="brand-logo-img">
+      </a>
+      <button type="button" class="mobile-drawer-close btn btn-sm btn-outline btn-icon-only">✕</button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="products.html" class="mobile-nav-link">Products <span>45 Items</span></a>
+      <a href="about.html" class="mobile-nav-link">About Us</a>
+      <a href="industries.html" class="mobile-nav-link active">Industries & Applications</a>
+      <a href="locations.html" class="mobile-nav-link">3 Mumbai Locations</a>
+      <a href="faq.html" class="mobile-nav-link">FAQ</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+    </div>
+  </div>
+
   <main>
-    <section class="section-dark" style="padding: 40px 0 32px 0;">
+    <section class="section-dark bg-blueprint" style="padding: 40px 0 32px 0;">
       <div class="container">
         <span class="section-eyebrow">Sector Expertise</span>
         <h1 style="color: white; font-size: clamp(1.8rem, 3vw, 2.5rem); margin-bottom: 8px;">
@@ -70,22 +92,87 @@
           <!-- Populated by JavaScript from data/industries.js -->
         </div>
 
-        <div class="notice-box" style="margin-top: 48px; text-align: center; padding: 28px;">
-          <h3 style="margin-bottom: 8px;">Need Fasteners for a Specialized Sector or Custom Engineering Project?</h3>
-          <p style="margin-bottom: 16px; font-size: 14px;">
+        <div class="notice-box" style="margin-top: 48px; text-align: center; padding: 28px; background: white; border: 1px solid var(--color-cool-grey-border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);">
+          <h3 style="margin-bottom: 8px; color: var(--color-deep-black);">Need Fasteners for a Specialized Sector or Custom Engineering Project?</h3>
+          <p style="margin-bottom: 16px; font-size: 14px; color: var(--color-text-muted);">
             Our technical team can discuss metallurgical requirements, proof loads, and non-standard fabrication drawings.
           </p>
-          <a href="request-a-quote.html" class="btn btn-primary">Discuss Your Requirement</a>
+          <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+            <a href="request-a-quote.html" class="btn btn-primary">Discuss Your Requirement</a>
+            <button type="button" class="btn btn-whatsapp" onclick="openWhatsAppQuote()">WhatsApp Sales</button>
+            <a href="https://share.google/fnx7M4NKP5fzHsoLj" target="_blank" rel="noopener noreferrer" class="btn btn-outline-blue">Google Profile ★</a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
+  <!-- Footer with High-Visibility Logo -->
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-bottom" style="border-top: none; padding-top: 0;">
-        <div>© 1975 – 2026 Good Luck Nut Bolt Corporation (GLNBC).</div>
+      <div class="footer-grid">
+        <div>
+          <div class="brand" style="margin-bottom: 16px;">
+            <img src="assets/images/brand/glnbc-logo.png" alt="GLNBC - Good Luck Nut Bolt Corporation" class="footer-brand-logo">
+          </div>
+          <p style="color: var(--color-text-dim); font-size: 13px; line-height: 1.6; margin-bottom: 16px;">
+            Established in 1975. Over 50 years of trusted supply of industrial fasteners, U-bolts, pipe clamps, high-tensile studs, nuts, bolts, and hardware in Mumbai.
+          </p>
+          <div style="font-size: 13px; color: white;">
+            <strong>Sales Contacts:</strong><br>
+            Phone: <a href="tel:9821441071" style="color: #79A9C9;">+91 98214 41071</a> / <a href="tel:8828068873" style="color: #79A9C9;">88280 68873</a><br>
+            Email: <a href="mailto:goodlucknutbol@gmail.com" style="color: #79A9C9;">goodlucknutbol@gmail.com</a><br>
+            Google Profile: <a href="https://share.google/fnx7M4NKP5fzHsoLj" target="_blank" rel="noopener noreferrer" style="color: #60A5FA;">View Reviews & Maps ★</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="products.html" class="footer-link">Products (45 Lines)</a></li>
+            <li><a href="request-a-quote.html" class="footer-link">Request a Quote</a></li>
+            <li><a href="about.html" class="footer-link">About Us (Est. 1975)</a></li>
+            <li><a href="industries.html" class="footer-link">Industries & Applications</a></li>
+            <li><a href="locations.html" class="footer-link">3 Mumbai Locations</a></li>
+            <li><a href="faq.html" class="footer-link">FAQ</a></li>
+            <li><a href="contact.html" class="footer-link">Contact & Sales</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Key Product Categories</h4>
+          <ul class="footer-links">
+            <li><a href="product.html?p=u-bolts" class="footer-link">U-Bolts & Clamps</a></li>
+            <li><a href="product.html?p=pipe-clamps" class="footer-link">Pipe Support Clamps</a></li>
+            <li><a href="product.html?p=pipe-hooks" class="footer-link">Pipe Hooks & Hangers</a></li>
+            <li><a href="product.html?p=studs-threaded-products" class="footer-link">Studs & Threaded Rods (B7)</a></li>
+            <li><a href="product.html?p=two-h-nuts" class="footer-link">2H Heavy Hex Nuts</a></li>
+            <li><a href="product.html?p=hex-bolts" class="footer-link">High-Tensile Hex Bolts</a></li>
+            <li><a href="product.html?p=foundation-bolts" class="footer-link">Foundation Anchor Bolts</a></li>
+            <li><a href="product.html?p=bitumen-washers" class="footer-link">Bitumen Washers (Dambar)</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Customer-Facing Branches</h4>
+          <div class="footer-branch-item">
+            <div class="footer-branch-name">Main Branch — Kumbharwada</div>
+            <div style="color: var(--color-text-dim);">67 Kumbharwada, Durgadevi St, Chor Bazaar, Mumbai – 400004</div>
+          </div>
+          <div class="footer-branch-item">
+            <div class="footer-branch-name">Good Luck Traders — Nagdevi</div>
+            <div style="color: var(--color-text-dim);">Karani Niwas, Shop No. 3, before 34, Nagdevi St, Mumbai – 400003</div>
+          </div>
+          <div class="footer-branch-item">
+            <div class="footer-branch-name">Good Luck Hardware — Bibijan St</div>
+            <div style="color: var(--color-text-dim);">15/17 Bibijan Street, Shop No. 3, Nagdevi, Mumbai – 400003</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 1975 – 2026 Good Luck Nut Bolt Corporation (GLNBC). All rights reserved.</div>
         <div>Sales: +91 98214 41071 / 88280 68873 • Mumbai, Maharashtra</div>
       </div>
     </div>
@@ -103,24 +190,17 @@
         GLNBC_INDUSTRIES.forEach(ind => {
           html += `
             <div class="product-card" style="background: white;">
-              <div style="display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 12px;">
-                <h3 style="font-size: 18px; color: var(--color-deep-black);">${escapeHtml(ind.name)}</h3>
-              </div>
-              <p style="font-size: 14px; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 16px; flex-grow: 1;">
-                ${escapeHtml(ind.description)}
-              </p>
-              <div style="border-top: 1px solid var(--color-cool-grey-border); padding-top: 12px; margin-bottom: 16px;">
-                <span style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--color-grey-muted); letter-spacing: 0.05em; display: block; margin-bottom: 6px;">
-                  Key Products Supplied:
-                </span>
-                <div style="display: flex; flex-wrap: wrap; gap: 4px;">
-                  ${ind.keyProducts.map(p => `<span class="tag-spec">${escapeHtml(p)}</span>`).join('')}
+              <div class="product-card-content">
+                <span class="product-card-category" style="margin-bottom: 6px;">Sector Profile</span>
+                <h3 style="font-size: 20px; color: var(--color-deep-black); margin-bottom: 10px;">${escapeHtml(ind.name)}</h3>
+                <p style="font-size: 14px; color: var(--color-text-dark); margin-bottom: 16px; line-height: 1.6; text-align: justify;">${escapeHtml(ind.description)}</p>
+                
+                <div style="margin-top: auto; border-top: 1px solid var(--color-cool-grey-border); padding-top: 14px;">
+                  <div style="font-size: 12px; font-weight: 700; color: var(--color-grey-muted); text-transform: uppercase; margin-bottom: 6px;">Key Supplied Components</div>
+                  <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+                    ${ind.keyProducts.map(p => `<span class="tag" style="margin: 0;">${escapeHtml(p)}</span>`).join('')}
+                  </div>
                 </div>
-              </div>
-              <div class="product-card-actions">
-                <a href="request-a-quote.html?p=${encodeURIComponent(ind.name + ' Requirement')}" class="btn btn-sm btn-primary w-full">
-                  Request Sector Quote
-                </a>
               </div>
             </div>
           `;
@@ -128,8 +208,11 @@
         grid.innerHTML = html;
       }
     });
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#039;');
+    }
   </script>
 </body>
 </html>
-
-

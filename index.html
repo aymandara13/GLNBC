@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -12,8 +12,10 @@
   <meta property="og:description" content="50+ Years of Trust. Suppliers of industrial fasteners, custom U-bolts, pipe clamps, high-tensile studs, and hardware in Mumbai since 1975.">
   <meta property="og:type" content="website">
   
-  <!-- CSS Design System -->
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/images/brand/favicon.png">
+  
+  <!-- CSS Design System -->
   <link rel="stylesheet" href="assets/css/variables.css">
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/components.css">
@@ -30,6 +32,7 @@
     "description": "Mumbai's trusted industrial fasteners, U-bolts, clamps, studs, and custom hardware supplier.",
     "telephone": "+91-9821441071",
     "email": "goodlucknutbol@gmail.com",
+    "url": "https://share.google/fnx7M4NKP5fzHsoLj",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "67 Kumbharwada, Durgadevi St, Chor Bazaar, Kamathipura",
@@ -53,7 +56,7 @@
   }
   </script>
 </head>
-<body>
+<body class="bg-cad-steel">
 
   <!-- Top Notification & Contact Bar -->
   <div class="top-bar">
@@ -67,6 +70,8 @@
         <a href="tel:8828068873">Enquiry: +91 88280 68873</a>
         <span style="opacity: 0.3;">|</span>
         <a href="locations.html">3 Mumbai Branches</a>
+        <span style="opacity: 0.3;">|</span>
+        <a href="https://share.google/fnx7M4NKP5fzHsoLj" target="_blank" rel="noopener noreferrer" style="color: #60A5FA;">★ Google Profile</a>
       </div>
     </div>
   </div>
@@ -123,99 +128,173 @@
     <div style="margin-top: auto; display: flex; flex-direction: column; gap: 10px;">
       <a href="request-a-quote.html" class="btn btn-primary btn-lg w-full">Get a Quote</a>
       <button type="button" class="btn btn-whatsapp btn-lg w-full" onclick="openWhatsAppQuote()">WhatsApp Us</button>
-      <div style="font-size: 12px; color: var(--color-grey-muted); text-align: center; margin-top: 8px;">
+      <a href="https://share.google/fnx7M4NKP5fzHsoLj" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm w-full" style="text-align: center;">View Google Profile ★</a>
+      <div style="font-size: 12px; color: var(--color-grey-muted); text-align: center; margin-top: 4px;">
         Sales: +91 98214 41071 / 88280 68873
       </div>
     </div>
   </div>
 
   <main>
-    <!-- Hero Section (UI Reference 1) -->
-    <section class="hero">
-      <div class="container">
-        <div class="hero-content">
-          <div class="hero-badge">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.5L19.5 19h-15L12 5.5z"/></svg>
-            50+ Years of Experience • Established in 1975 • Mumbai
-          </div>
-          
-          <h1 class="hero-title">
-            50+ Years of Trust.<br>
-            <span>The Foundation Your Industry Builds On.</span>
-          </h1>
-
-          <p class="hero-subtitle">
-            Specialist suppliers of precision industrial fasteners, U-bolts, pipe clamps, high-tensile B7 studs, 2H nuts, and custom hardware. Supplying infrastructure, fabrication, and MEP projects across India with guaranteed technical standards and custom dimensions to specification.
-          </p>
-
-          <div class="hero-actions">
-            <a href="request-a-quote.html" class="btn btn-lg btn-primary" data-track="hero_get_quote">
-              Request a Quote
-            </a>
-            <a href="products.html" class="btn btn-lg btn-outline-white" data-track="hero_view_products">
-              Browse Products (45 Lines)
-            </a>
-            <button type="button" class="btn btn-lg btn-whatsapp" onclick="openWhatsAppQuote()" data-track="hero_whatsapp">
-              WhatsApp Sales
-            </button>
-          </div>
-
-          <!-- Fast Live Search Bar with Quick Tag Pills (UI Reference 1) -->
-          <div class="hero-quick-search search-wrapper">
-            <form action="products.html" method="GET" class="search-input-group">
-              <svg class="search-icon-left" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-              <input type="text" name="q" class="search-input" placeholder="Search by product name, grade, or standard (e.g. U-Bolt, B7 Stud, 2H Nut, Pipe Hook, Wedge Anchor)..." aria-label="Search Fasteners and Clamps">
-            </form>
-
-            <div class="search-pills-bar">
-              <span class="search-pills-label">Popular:</span>
-              <a href="products.html?q=U-Bolt" class="search-pill">U-Bolts</a>
-              <a href="products.html?q=B7+Stud" class="search-pill">B7 Studs</a>
-              <a href="products.html?q=2H+Nut" class="search-pill">2H Nuts</a>
-              <a href="products.html?q=Pipe+Hook" class="search-pill">Pipe Hooks</a>
-              <a href="products.html?q=Pipe+Clamp" class="search-pill">Pipe Clamps</a>
-              <a href="products.html?q=Wedge+Anchor" class="search-pill">Wedge Anchors</a>
-              <a href="products.html?q=Bitumen" class="search-pill">Bitumen Washers</a>
+    <!-- Rolling Pictures Hero Section (Inspired by amioptics.co.in) -->
+    <section class="hero-slider-wrapper bg-blueprint bg-dark" aria-label="Featured Highlights Carousel">
+      
+      <!-- Slide 1: U-Bolts & Clamping Solutions (Flagship) -->
+      <div class="hero-slide active">
+        <div class="container">
+          <div class="hero-slide-grid">
+            <div class="hero-content">
+              <div class="hero-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.5L19.5 19h-15L12 5.5z"/></svg>
+                Flagship Line • IS 3570 / DIN Standards • Mumbai Specialist
+              </div>
+              <h1 class="hero-title">
+                Precision U-Bolts &<br>
+                <span>Pipe Support Clamping Solutions.</span>
+              </h1>
+              <p class="hero-subtitle">
+                Mumbai's specialist manufacturer and stockist of heavy-duty round, square, PVC-coated, and rubber-sleeved U-Bolts. Standard catalog sizes and custom bend radii fabricated to exact engineering drawings.
+              </p>
+              <div class="hero-actions">
+                <a href="product.html?p=u-bolts" class="btn btn-lg btn-primary" data-track="hero_view_ubolt">Explore U-Bolts</a>
+                <a href="request-a-quote.html?product=U-Bolts" class="btn btn-lg btn-outline-white">Request U-Bolt Quote</a>
+              </div>
             </div>
+            <div class="hero-slide-media">
+              <img src="assets/images/products/u%20bolts.jpg" alt="GLNBC Industrial U-Bolts and Clamping Solutions" loading="eager">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2: High-Tensile Fasteners & B7 Studs -->
+      <div class="hero-slide">
+        <div class="container">
+          <div class="hero-slide-grid">
+            <div class="hero-content">
+              <div class="hero-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon></svg>
+                ASTM A193 B7 • ASTM A194 2H • High Tensile 8.8 / 10.9
+              </div>
+              <h2 class="hero-title">
+                50+ Years of Trust.<br>
+                <span>The Foundation Your Industry Builds On.</span>
+              </h2>
+              <p class="hero-subtitle">
+                Supplying refinery-grade ASTM A193 Grade B7 studs, 2H heavy hex nuts, DIN 933/934 hex bolts, and high-tensile fasteners to infrastructure, MEP, petrochemical, and construction projects across India.
+              </p>
+              <div class="hero-actions">
+                <a href="products.html" class="btn btn-lg btn-primary" data-track="hero_view_products">Browse All 45 Products</a>
+                <a href="request-a-quote.html" class="btn btn-lg btn-outline-white">Instant Quote</a>
+              </div>
+            </div>
+            <div class="hero-slide-media">
+              <img src="assets/images/products/astm%20a193%20grade%20b7%20studs.jpg" alt="ASTM A193 Grade B7 Studs and High Tensile Fasteners" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3: Anchors, Hooks & Custom Fabrication -->
+      <div class="hero-slide">
+        <div class="container">
+          <div class="hero-slide-grid">
+            <div class="hero-content">
+              <div class="hero-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect></svg>
+                Custom Drawings • 3 Mumbai Branches • Ready Stocks
+              </div>
+              <h2 class="hero-title">
+                Heavy Anchors, Pipe Hooks &<br>
+                <span>Custom Engineering Hardware.</span>
+              </h2>
+              <p class="hero-subtitle">
+                From wedge and pin-type anchor fasteners to heavy-duty pipe hooks, foundation bolts, Z-channel trays, and bitumen washers—get immediate trade counter pickups or project dispatches.
+              </p>
+              <div class="hero-actions">
+                <a href="products.html" class="btn btn-lg btn-primary">Discover Fasteners</a>
+                <button type="button" class="btn btn-lg btn-whatsapp" onclick="openWhatsAppQuote()">WhatsApp Sales</button>
+              </div>
+            </div>
+            <div class="hero-slide-media">
+              <img src="assets/images/products/pipe_hook_hd.jpg" alt="Heavy Duty Pipe Hooks and Industrial Fasteners" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Slider Controls -->
+      <div class="hero-slider-controls">
+        <button type="button" class="hero-arrow-btn hero-prev-btn" aria-label="Previous Slide">‹</button>
+        <div class="hero-dots-container">
+          <button type="button" class="hero-dot active" aria-label="Slide 1"></button>
+          <button type="button" class="hero-dot" aria-label="Slide 2"></button>
+          <button type="button" class="hero-dot" aria-label="Slide 3"></button>
+        </div>
+        <button type="button" class="hero-arrow-btn hero-next-btn" aria-label="Next Slide">›</button>
+      </div>
+
+      <!-- Integrated Fast Live Search Bar (UI Reference 1) -->
+      <div class="container" style="padding-bottom: 28px;">
+        <div class="hero-quick-search search-wrapper" style="max-width: 820px; margin: 0 auto;">
+          <form action="products.html" method="GET" class="search-input-group">
+            <svg class="search-icon-left" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" name="q" class="search-input" placeholder="Search by product name, grade, or standard (e.g. U-Bolt, B7 Stud, 2H Nut, Pipe Hook, Wedge Anchor)..." aria-label="Search Fasteners and Clamps">
+          </form>
+
+          <div class="search-pills-bar" style="justify-content: center;">
+            <span class="search-pills-label">Popular:</span>
+            <a href="products.html?q=U-Bolt" class="search-pill">U-Bolts</a>
+            <a href="products.html?q=B7+Stud" class="search-pill">B7 Studs</a>
+            <a href="products.html?q=2H+Nut" class="search-pill">2H Nuts</a>
+            <a href="products.html?q=Pipe+Hook" class="search-pill">Pipe Hooks</a>
+            <a href="products.html?q=Pipe+Clamp" class="search-pill">Pipe Clamps</a>
+            <a href="products.html?q=Wedge+Anchor" class="search-pill">Wedge Anchors</a>
+            <a href="products.html?q=Foundation+Bolt" class="search-pill">Foundation Bolts</a>
+            <a href="products.html?q=Bitumen" class="search-pill">Bitumen Washers</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Trust Strip -->
-    <section class="trust-strip">
+    <!-- 4-Pillar Trust Highlights (Redesigned & Prominently Placed Below Hero) -->
+    <section class="section" style="padding: 40px 0 20px 0;">
       <div class="container">
-        <div class="trust-grid">
-          <div class="trust-item">
-            <svg class="trust-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-            <div>
-              <div class="trust-item-title">Established 1975</div>
-              <div class="trust-item-desc">Over 50 years of continuous trade and supply in Mumbai.</div>
+        <div class="trust-cards-grid">
+          <!-- Pillar 1: Est. 1975 -->
+          <div class="trust-card">
+            <div class="trust-card-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
             </div>
+            <h3 class="trust-card-title">Established 1975</h3>
+            <p class="trust-card-desc">Over 50 years of continuous trade and reliable fasteners supply in Mumbai and pan-India.</p>
           </div>
 
-          <div class="trust-item">
-            <svg class="trust-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-            <div>
-              <div class="trust-item-title">Standard & Custom Fabrication</div>
-              <div class="trust-item-desc">Standard metric/imperial catalog sizes and custom items to drawing.</div>
+          <!-- Pillar 2: Standard & Custom Fabrication -->
+          <div class="trust-card">
+            <div class="trust-card-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
             </div>
+            <h3 class="trust-card-title">Standard & Custom Fabrication</h3>
+            <p class="trust-card-desc">Standard metric/imperial catalog sizes and custom fabricated hardware to your CAD / drawing.</p>
           </div>
 
-          <div class="trust-item">
-            <svg class="trust-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-            <div>
-              <div class="trust-item-title">3 Mumbai Branches</div>
-              <div class="trust-item-desc">Trade counters in Kumbharwada, Nagdevi & Bibijan Street.</div>
+          <!-- Pillar 3: 3 Mumbai Branches -->
+          <div class="trust-card">
+            <div class="trust-card-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
             </div>
+            <h3 class="trust-card-title">3 Mumbai Branches</h3>
+            <p class="trust-card-desc">Physical trade counters and immediate collection points in Kumbharwada, Nagdevi & Bibijan Street.</p>
           </div>
 
-          <div class="trust-item">
-            <svg class="trust-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-            <div>
-              <div class="trust-item-title">Direct Technical Sales</div>
-              <div class="trust-item-desc">Speak directly with experienced fastener hardware specialists.</div>
+          <!-- Pillar 4: Direct Technical Sales -->
+          <div class="trust-card">
+            <div class="trust-card-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
             </div>
+            <h3 class="trust-card-title">Direct Technical Sales</h3>
+            <p class="trust-card-desc">Speak directly with experienced fastener hardware specialists for quick matching and pricing.</p>
           </div>
         </div>
       </div>
@@ -243,7 +322,7 @@
             </div>
             <ul class="technical-spec-list">
               <li><span class="technical-bullet">•</span> <strong>IS:</strong> IS 1363, IS 1364, IS 1367, IS 5324, IS 730</li>
-              <li><span class="technical-bullet">•</span> <strong>DIN:</strong> DIN 933, DIN 934, DIN 912, DIN 3570, DIN 125</li>
+              <li><span class="technical-bullet">•</span> <strong>DIN:</strong> DIN 933, DIN 934, DIN 912, DIN 3570, DIN 125, DIN 582</li>
               <li><span class="technical-bullet">•</span> <strong>ASTM:</strong> ASTM A193 (B7), ASTM A194 (2H), ASTM A307</li>
               <li><span class="technical-bullet">•</span> <strong>ISO / ANSI:</strong> ISO 4014, ISO 4017, ANSI B18.2.1</li>
               <li><span class="technical-bullet">•</span> <strong>Traceability:</strong> Material test certificates available</li>
@@ -310,7 +389,7 @@
         <div class="specialist-section">
           <div class="specialist-grid">
             <div>
-              <span class="badge badge-branded" style="margin-bottom: 12px;">Flagship Specialist Line</span>
+              <span class="badge badge-flagship" style="margin-bottom: 12px;">Flagship Specialist Line</span>
               <h2 style="color: white; margin-bottom: 16px;">
                 Mumbai's Specialist in Industrial U-Bolts & Pipe Clamping Solutions
               </h2>
@@ -344,7 +423,7 @@
             </div>
 
             <div style="background-color: rgba(0, 0, 0, 0.25); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: var(--radius-md); padding: 24px; display: flex; flex-direction: column;">
-              <div style="height: 180px; width: 100%; background: #FFFFFF; border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 16px; display: flex; align-items: center; justify-content: center; padding: 12px;">
+              <div style="height: 200px; width: 100%; background: #FFFFFF; border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 16px; display: flex; align-items: center; justify-content: center; padding: 12px;">
                 <img src="assets/images/products/u%20bolts.jpg" alt="GLNBC Industrial U-Bolts" style="max-height: 100%; max-width: 100%; object-fit: contain;">
               </div>
               <h3 style="color: white; font-size: 16px; margin-bottom: 12px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 8px;">
@@ -363,8 +442,8 @@
                 <a href="product.html?p=hi-tech-clamps" style="color: #B5D7ED; font-size: 13px; font-weight: 500; display: flex; justify-content: space-between;">
                   <span>• Hi-Tech Heavy Duty Clamps</span> <span>View →</span>
                 </a>
-                <a href="product.html?p=hose-clips" style="color: #B5D7ED; font-size: 13px; font-weight: 500; display: flex; justify-content: space-between;">
-                  <span>• Worm-Drive Hose Clips</span> <span>View →</span>
+                <a href="product.html?p=double-wire-hose-clamp" style="color: #B5D7ED; font-size: 13px; font-weight: 500; display: flex; justify-content: space-between;">
+                  <span>• Double-Wire Hose Clamps</span> <span>View →</span>
                 </a>
               </div>
             </div>
@@ -373,14 +452,14 @@
       </div>
     </section>
 
-    <!-- Curated Core Products Showcase (UI Reference 3 - No Endless Scroll!) -->
+    <!-- Curated Core Products Showcase (Browsing without endless scroll) -->
     <section class="section section-grey">
       <div class="container">
         <div class="section-header text-center">
           <span class="section-eyebrow">Curated Product Lines</span>
           <h2 class="section-title">Featured Fasteners & Hardware</h2>
           <p class="section-subtitle">
-            A representative selection of precision standard and high-tensile fasteners stocked across our Mumbai trade locations.
+            Browse our core precision hardware lines. Click any product image or use the card arrows to explore multiple photos.
           </p>
         </div>
 
@@ -405,8 +484,8 @@
           <div>
             <span class="section-eyebrow">Custom Fabrication & Sourcing</span>
             <h2 style="margin-bottom: 12px;">Can't Find the Exact Size or Specification?</h2>
-            <p style="font-size: 15px; margin-bottom: 16px; color: var(--color-text-muted); line-height: 1.65; max-width: 820px;">
-              Industrial projects frequently demand non-standard lengths, custom thread pitches, non-catalog bend radii, or high-alloy metallurgy. Send us your requirements, component sketch, or engineering PDF.
+            <p style="font-size: 15px; margin-bottom: 16px; color: var(--color-text-muted); line-height: 1.65; max-width: 820px; text-align: justify;">
+              Industrial projects frequently demand non-standard lengths, custom thread pitches, non-catalog bend radii, or high-alloy metallurgy. Send us your requirements, component sketch, or engineering PDF for an immediate quote.
             </p>
             <div style="display: flex; gap: 12px; flex-wrap: wrap;">
               <a href="request-a-quote.html" class="btn btn-primary">
@@ -469,83 +548,89 @@
       </div>
     </section>
 
-    <!-- Verified Locations Section -->
+    <!-- Customer-Facing Branches with Interactive Google Maps Embed (amioptics inspiration) -->
     <section class="section section-grey" id="locations-section">
       <div class="container">
         <div class="section-header text-center">
           <span class="section-eyebrow">Mumbai Trade Presence</span>
-          <h2 class="section-title">Our Customer-Facing Branches</h2>
+          <h2 class="section-title">Visit Our 3 Mumbai Trade Counters</h2>
           <p class="section-subtitle">
-            Visit our trade counters in Mumbai for immediate collections, technical consultations, or sample verifications.
+            Direct physical trade counters in Kumbharwada, Nagdevi & Bibijan Street for immediate collection, sample verifications, and technical consultations.
           </p>
         </div>
 
-        <div class="product-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-          <!-- Main Branch (Primary) -->
-          <div class="location-card is-main">
-            <span class="location-card-tag">Main Sales Branch</span>
-            <h3 class="location-name">Good Luck Nut Bolt Corporation</h3>
-            <div class="location-address">
-              <strong>Address:</strong> 67 Kumbharwada, Durgadevi St, Chor Bazaar, Kamathipura, Mumbai, Maharashtra – 400004
-            </div>
-            <div class="location-details">
-              <div class="location-detail-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                <span>Sales: <strong>9821441071</strong> / <strong>8828068873</strong></span>
+        <div class="maps-section-grid">
+          <!-- Branch Cards List -->
+          <div style="display: flex; flex-direction: column; gap: 16px;">
+            <!-- Main Branch (Primary) -->
+            <div class="location-card is-main">
+              <span class="location-card-tag">Main Sales Branch</span>
+              <h3 class="location-name">Good Luck Nut Bolt Corporation</h3>
+              <div class="location-address">
+                <strong>Address:</strong> 67 Kumbharwada, Durgadevi St, Chor Bazaar, Kamathipura, Mumbai, Maharashtra – 400004
               </div>
-              <div class="location-detail-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                <span>Email: goodlucknutbol@gmail.com</span>
+              <div class="location-details">
+                <div class="location-detail-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                  <span>Sales: <strong>9821441071</strong> / <strong>8828068873</strong></span>
+                </div>
+                <div class="location-detail-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                  <span>Email: goodlucknutbol@gmail.com</span>
+                </div>
+              </div>
+              <div style="margin-top: auto; display: flex; gap: 8px;">
+                <a href="https://share.google/fnx7M4NKP5fzHsoLj" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary w-full">Google Maps & Reviews ★</a>
+                <button type="button" class="btn btn-sm btn-whatsapp btn-icon-only" onclick="openWhatsAppQuote()" title="WhatsApp Main Branch">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.82.49 3.53 1.34 5L2 22l5.16-1.32C8.6 21.52 10.25 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
+                </button>
               </div>
             </div>
-            <div style="margin-top: auto; display: flex; gap: 8px;">
-              <a href="contact.html" class="btn btn-sm btn-primary w-full">Contact Branch</a>
-              <button type="button" class="btn btn-sm btn-whatsapp btn-icon-only" onclick="openWhatsAppQuote()" title="WhatsApp Main Branch">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.82.49 3.53 1.34 5L2 22l5.16-1.32C8.6 21.52 10.25 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
-              </button>
+
+            <!-- Branch 2: Good Luck Traders -->
+            <div class="location-card">
+              <h3 class="location-name">Good Luck Traders</h3>
+              <div class="location-address">
+                <strong>Address:</strong> Karani Niwas, Shop No. 3, before 34, Nagdevi St, Ground Floor, Masjid Bunder, Mumbai – 400003
+              </div>
+              <div class="location-details">
+                <div class="location-detail-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                  <span>Sales: <strong>9821441071</strong></span>
+                </div>
+              </div>
+              <div style="margin-top: auto; display: flex; gap: 8px;">
+                <a href="locations.html" class="btn btn-sm btn-outline w-full">View Branch Info</a>
+              </div>
+            </div>
+
+            <!-- Branch 3: Good Luck Hardware -->
+            <div class="location-card">
+              <h3 class="location-name">Good Luck Hardware</h3>
+              <div class="location-address">
+                <strong>Address:</strong> 15/17 Bibijan Street, Shop No. 3, Nagdevi, Mumbai – 400003
+              </div>
+              <div class="location-details">
+                <div class="location-detail-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                  <span>Sales: <strong>9821441071</strong></span>
+                </div>
+              </div>
+              <div style="margin-top: auto; display: flex; gap: 8px;">
+                <a href="locations.html" class="btn btn-sm btn-outline w-full">View Branch Info</a>
+              </div>
             </div>
           </div>
 
-          <!-- Branch 2: Good Luck Traders -->
-          <div class="location-card">
-            <h3 class="location-name">Good Luck Traders</h3>
-            <div class="location-address">
-              <strong>Address:</strong> Karani Niwas, Shop No. 3, before 34, Nagdevi St, Ground Floor, Masjid Bunder, Mumbai – 400003
-            </div>
-            <div class="location-details">
-              <div class="location-detail-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                <span>Sales: <strong>9821441071</strong></span>
-              </div>
-              <div class="location-detail-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                <span>Email: goodlucknutbol@gmail.com</span>
-              </div>
-            </div>
-            <div style="margin-top: auto; display: flex; gap: 8px;">
-              <a href="contact.html" class="btn btn-sm btn-outline w-full">Contact Branch</a>
-            </div>
-          </div>
-
-          <!-- Branch 3: Good Luck Hardware -->
-          <div class="location-card">
-            <h3 class="location-name">Good Luck Hardware</h3>
-            <div class="location-address">
-              <strong>Address:</strong> 15/17 Bibijan Street, Shop No. 3, Nagdevi, Mumbai – 400003
-            </div>
-            <div class="location-details">
-              <div class="location-detail-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                <span>Sales: <strong>9821441071</strong></span>
-              </div>
-              <div class="location-detail-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                <span>Email: goodlucknutbol@gmail.com</span>
-              </div>
-            </div>
-            <div style="margin-top: auto; display: flex; gap: 8px;">
-              <a href="contact.html" class="btn btn-sm btn-outline w-full">Contact Branch</a>
-            </div>
+          <!-- Interactive Google Maps Container -->
+          <div class="maps-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.4735209776856!2d72.8258333!3d18.9634722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce40498b8451%3A0xb304b7c8dc916212!2s67%2C%20Kumbharwada%202nd%20Ln%2C%20Chor%20Bazaar%2C%20Kumbharwada%2C%20Mumbai%2C%20Maharashtra%20400004!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+              title="Good Luck Nut Bolt Corporation Google Maps Location"
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade" 
+              allowfullscreen>
+            </iframe>
           </div>
         </div>
       </div>
@@ -560,7 +645,7 @@
         </p>
 
         <div style="display: inline-block; background-color: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); padding: 10px 20px; border-radius: var(--radius-md); font-size: 14px; color: #FCD34D; margin-bottom: 28px;">
-          Bulk & cash discounts available — ask us.
+          Bulk & contractor discounts available — speak with our sales desk.
         </div>
 
         <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
@@ -572,22 +657,23 @@
     </section>
   </main>
 
-  <!-- Technical Footer -->
+  <!-- Technical Footer with High-Visibility Logo -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
         <!-- Col 1: Brand & Heritage -->
         <div>
           <div class="brand" style="margin-bottom: 16px;">
-            <img src="assets/images/brand/glnbc-logo.png" alt="GLNBC - Good Luck Nut Bolt Corporation" class="brand-logo-img" style="filter: brightness(0) invert(1); height: 48px;">
+            <img src="assets/images/brand/glnbc-logo.png" alt="GLNBC - Good Luck Nut Bolt Corporation" class="footer-brand-logo">
           </div>
           <p style="color: var(--color-text-dim); font-size: 13px; line-height: 1.6; margin-bottom: 16px;">
-            Established in 1975. 50+ years of trade experience supplying precision industrial fasteners, custom U-bolts, pipe clamps, high-tensile studs, and hardware in Mumbai.
+            Established in 1975. Over 50 years of trade experience supplying precision industrial fasteners, custom U-bolts, pipe clamps, high-tensile studs, and hardware in Mumbai.
           </p>
           <div style="font-size: 13px; color: white;">
             <strong>Sales Contacts:</strong><br>
             Phone: <a href="tel:9821441071" style="color: #79A9C9;">+91 98214 41071</a> / <a href="tel:8828068873" style="color: #79A9C9;">88280 68873</a><br>
-            Email: <a href="mailto:goodlucknutbol@gmail.com" style="color: #79A9C9;">goodlucknutbol@gmail.com</a>
+            Email: <a href="mailto:goodlucknutbol@gmail.com" style="color: #79A9C9;">goodlucknutbol@gmail.com</a><br>
+            Google Profile: <a href="https://share.google/fnx7M4NKP5fzHsoLj" target="_blank" rel="noopener noreferrer" style="color: #60A5FA;">View Reviews & Maps ★</a>
           </div>
         </div>
 
@@ -672,7 +758,7 @@
   <!-- Homepage Featured Curated Products Populator -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // Curated 8 core showcase items (no endless scroll)
+      // Curated 8 core showcase items with multi-image flipper support
       const featuredSlugs = [
         'u-bolts',
         'studs-threaded-products',
@@ -693,16 +779,27 @@
         let html = '';
         featuredItems.forEach(prod => {
           const firstMat = (prod.materials && prod.materials[0]) ? prod.materials[0] : 'Mild Steel / SS';
+          const allImages = [prod.heroImage, ...(prod.galleryImages || [])].filter(Boolean);
+          
           let imgHtml = '';
-          if (prod.heroImage) {
+          if (allImages.length > 0) {
+            const hasMultiple = allImages.length > 1;
+            const arrowsHtml = hasMultiple ? `
+              <button type="button" class="card-img-arrow card-img-prev" onclick="changeCardImage(event, '${prod.slug}', -1)" aria-label="Previous Image">‹</button>
+              <button type="button" class="card-img-arrow card-img-next" onclick="changeCardImage(event, '${prod.slug}', 1)" aria-label="Next Image">›</button>
+              <span class="card-img-counter">1/${allImages.length}</span>
+            ` : '';
+
             imgHtml = `
-              <div class="product-card-media">
-                <img src="${prod.heroImage}" alt="${escapeHtml(prod.name)}" loading="lazy">
+              <div class="product-card-media" onclick="window.location.href='product.html?p=${prod.slug}'" title="Click to view full specifications of ${escapeHtml(prod.name)}">
+                <img src="${allImages[0]}" alt="${escapeHtml(prod.name)}" loading="lazy">
+                ${arrowsHtml}
               </div>
             `;
           }
+
           html += `
-            <article class="product-card">
+            <article class="product-card" data-product-slug="${prod.slug}">
               ${imgHtml}
               <div class="product-card-content">
                 <div class="product-card-header">
@@ -739,16 +836,26 @@
         const brandedItems = GLNBC_PRODUCTS.filter(p => p.visibilityTier === 'Branded' || p.visibilityTier === 'Also Deal In');
         let html = '';
         brandedItems.forEach(prod => {
+          const allImages = [prod.heroImage, ...(prod.galleryImages || [])].filter(Boolean);
           let imgHtml = '';
-          if (prod.heroImage) {
+          if (allImages.length > 0) {
+            const hasMultiple = allImages.length > 1;
+            const arrowsHtml = hasMultiple ? `
+              <button type="button" class="card-img-arrow card-img-prev" onclick="changeCardImage(event, '${prod.slug}', -1)" aria-label="Previous Image">‹</button>
+              <button type="button" class="card-img-arrow card-img-next" onclick="changeCardImage(event, '${prod.slug}', 1)" aria-label="Next Image">›</button>
+              <span class="card-img-counter">1/${allImages.length}</span>
+            ` : '';
+
             imgHtml = `
-              <div class="product-card-media" style="height: 160px;">
-                <img src="${prod.heroImage}" alt="${escapeHtml(prod.name)}" loading="lazy">
+              <div class="product-card-media" style="height: 160px;" onclick="window.location.href='product.html?p=${prod.slug}'" title="Click to view ${escapeHtml(prod.name)}">
+                <img src="${allImages[0]}" alt="${escapeHtml(prod.name)}" loading="lazy">
+                ${arrowsHtml}
               </div>
             `;
           }
+
           html += `
-            <article class="product-card">
+            <article class="product-card" data-product-slug="${prod.slug}">
               ${imgHtml}
               <div class="product-card-content" style="padding: 16px;">
                 <div class="product-card-header">
@@ -796,4 +903,3 @@
   </script>
 </body>
 </html>
-

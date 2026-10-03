@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -6,13 +6,13 @@
   <title>Our Mumbai Locations & Branches | Good Luck Nut Bolt Corporation</title>
   <meta name="description" content="Visit Good Luck Nut Bolt Corporation across 3 customer-facing trade counters in Mumbai: Kumbharwada (Chor Bazaar), Nagdevi Street, and Bibijan Street.">
   
-    <link rel="icon" type="image/png" href="assets/images/brand/favicon.png">
-<link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="icon" type="image/png" href="assets/images/brand/favicon.png">
+  <link rel="stylesheet" href="assets/css/variables.css">
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/components.css">
   <link rel="stylesheet" href="assets/css/layout.css">
 </head>
-<body>
+<body class="bg-cad-steel">
 
   <!-- Top Bar -->
   <div class="top-bar">
@@ -24,6 +24,8 @@
         <a href="tel:9821441071">Sales: +91 98214 41071</a>
         <span style="opacity: 0.3;">|</span>
         <a href="tel:8828068873">Enquiry: +91 88280 68873</a>
+        <span style="opacity: 0.3;">|</span>
+        <a href="https://share.google/fnx7M4NKP5fzHsoLj" target="_blank" rel="noopener noreferrer" style="color: #60A5FA;">★ Google Profile</a>
       </div>
     </div>
   </div>
@@ -31,7 +33,7 @@
   <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
-            <a href="index.html" class="brand" aria-label="Good Luck Nut Bolt Corporation Homepage">
+      <a href="index.html" class="brand" aria-label="Good Luck Nut Bolt Corporation Homepage">
         <img src="assets/images/brand/glnbc-logo.png" alt="GLNBC - Good Luck Nut Bolt Corporation" class="brand-logo-img">
       </a>
 
@@ -51,8 +53,28 @@
     </div>
   </header>
 
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-overlay"></div>
+  <div class="mobile-drawer" role="dialog" aria-modal="true">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="brand" aria-label="Good Luck Nut Bolt Corporation Homepage">
+        <img src="assets/images/brand/glnbc-logo.png" alt="GLNBC - Good Luck Nut Bolt Corporation" class="brand-logo-img">
+      </a>
+      <button type="button" class="mobile-drawer-close btn btn-sm btn-outline btn-icon-only">✕</button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="products.html" class="mobile-nav-link">Products <span>45 Items</span></a>
+      <a href="about.html" class="mobile-nav-link">About Us</a>
+      <a href="industries.html" class="mobile-nav-link">Industries & Applications</a>
+      <a href="locations.html" class="mobile-nav-link active">3 Mumbai Locations</a>
+      <a href="faq.html" class="mobile-nav-link">FAQ</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+    </div>
+  </div>
+
   <main>
-    <section class="section-dark" style="padding: 40px 0 32px 0;">
+    <section class="section-dark bg-blueprint" style="padding: 40px 0 32px 0;">
       <div class="container">
         <span class="section-eyebrow">Trade Network</span>
         <h1 style="color: white; font-size: clamp(1.8rem, 3vw, 2.5rem); margin-bottom: 8px;">
@@ -70,12 +92,12 @@
           
           <!-- Branch 1: Main Branch (Primary) -->
           <div class="location-card is-main" style="padding: 32px;">
-            <img src="assets/images/brand/glnbc-logo.png" alt="Good Luck Nut Bolt Corporation" class="branch-card-logo" style="max-height: 52px; margin-bottom: 16px;">`n            <span class="location-card-tag">Main Sales Branch</span>
+            <span class="location-card-tag">Main Sales Branch</span>
             <h2 style="font-size: 24px; margin-bottom: 8px; color: var(--color-deep-black);">
               Good Luck Nut Bolt Corporation
             </h2>
             <p style="font-size: 14px; color: var(--color-industrial-blue); font-weight: 600; margin-bottom: 16px;">
-              Primary Sales Counter & Fastener Inventory Hub
+              Primary Sales Counter & Fastener Inventory Hub (Est. 1975)
             </p>
             
             <div style="font-size: 16px; line-height: 1.6; color: var(--color-text-dark); margin-bottom: 20px; background: white; padding: 16px; border: 1px solid var(--color-cool-grey-border); border-radius: var(--radius-md);">
@@ -109,6 +131,7 @@
               <button type="button" class="btn btn-whatsapp" onclick="openWhatsAppQuote('', 'Hello Good Luck Nut Bolt Corporation (Kumbharwada Branch), I would like to make an enquiry.')">
                 WhatsApp Main Branch
               </button>
+              <a href="https://share.google/fnx7M4NKP5fzHsoLj" target="_blank" rel="noopener noreferrer" class="btn btn-outline-blue">View Google Profile & Reviews ★</a>
             </div>
           </div>
 
@@ -117,7 +140,7 @@
             
             <!-- Branch 2: Good Luck Traders -->
             <div class="location-card" style="padding: 28px;">
-              <img src="assets/images/brand/goodluck-traders-logo.png" alt="Good Luck Traders" class="branch-card-logo" style="max-height: 44px; margin-bottom: 12px;">`n              <h3 style="font-size: 20px; margin-bottom: 6px;">Good Luck Traders</h3>
+              <h3 style="font-size: 20px; margin-bottom: 6px;">Good Luck Traders</h3>
               <p style="font-size: 13px; color: var(--color-grey-muted); font-weight: 600; text-transform: uppercase; margin-bottom: 14px;">
                 Branch 2 — Nagdevi Street Market
               </p>
@@ -142,7 +165,7 @@
 
             <!-- Branch 3: Good Luck Hardware -->
             <div class="location-card" style="padding: 28px;">
-              <img src="assets/images/brand/goodluck-hardware-logo.svg" alt="Good Luck Hardware" class="branch-card-logo" style="max-height: 44px; margin-bottom: 12px;">`n              <h3 style="font-size: 20px; margin-bottom: 6px;">Good Luck Hardware</h3>
+              <h3 style="font-size: 20px; margin-bottom: 6px;">Good Luck Hardware</h3>
               <p style="font-size: 13px; color: var(--color-grey-muted); font-weight: 600; text-transform: uppercase; margin-bottom: 14px;">
                 Branch 3 — Bibijan Street
               </p>
@@ -166,6 +189,20 @@
             </div>
           </div>
 
+          <!-- Interactive Google Maps Location Section -->
+          <div style="margin-top: 16px;">
+            <h3 style="font-size: 20px; margin-bottom: 12px; color: var(--color-deep-black);">Find Us on Google Maps</h3>
+            <div class="maps-container">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.4735209776856!2d72.8258333!3d18.9634722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce40498b8451%3A0xb304b7c8dc916212!2s67%2C%20Kumbharwada%202nd%20Ln%2C%20Chor%20Bazaar%2C%20Kumbharwada%2C%20Mumbai%2C%20Maharashtra%20400004!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                title="Good Luck Nut Bolt Corporation Google Maps Location"
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade" 
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+
           <!-- Storage Support Note -->
           <div class="notice-box" style="text-align: center; padding: 20px;">
             <strong>Warehouse & Storage Logistics:</strong> Supported by dedicated additional bulk storage and warehouse staging facilities across Mumbai to fulfill high-volume and project-level dispatches.
@@ -175,12 +212,73 @@
     </section>
   </main>
 
-  <!-- Footer -->
+  <!-- Footer with High-Visibility Logo -->
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-bottom" style="border-top: none; padding-top: 0;">
-        <div>© 1975 – 2026 Good Luck Nut Bolt Corporation (GLNBC).</div>
-        <div>Sales: +91 98214 41071 / 88280 68873 • Email: goodlucknutbol@gmail.com</div>
+      <div class="footer-grid">
+        <div>
+          <div class="brand" style="margin-bottom: 16px;">
+            <img src="assets/images/brand/glnbc-logo.png" alt="GLNBC - Good Luck Nut Bolt Corporation" class="footer-brand-logo">
+          </div>
+          <p style="color: var(--color-text-dim); font-size: 13px; line-height: 1.6; margin-bottom: 16px;">
+            Established in 1975. Over 50 years of trusted supply of industrial fasteners, U-bolts, pipe clamps, high-tensile studs, nuts, bolts, and hardware in Mumbai.
+          </p>
+          <div style="font-size: 13px; color: white;">
+            <strong>Sales Contacts:</strong><br>
+            Phone: <a href="tel:9821441071" style="color: #79A9C9;">+91 98214 41071</a> / <a href="tel:8828068873" style="color: #79A9C9;">88280 68873</a><br>
+            Email: <a href="mailto:goodlucknutbol@gmail.com" style="color: #79A9C9;">goodlucknutbol@gmail.com</a><br>
+            Google Profile: <a href="https://share.google/fnx7M4NKP5fzHsoLj" target="_blank" rel="noopener noreferrer" style="color: #60A5FA;">View Reviews & Maps ★</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="products.html" class="footer-link">Products (45 Lines)</a></li>
+            <li><a href="request-a-quote.html" class="footer-link">Request a Quote</a></li>
+            <li><a href="about.html" class="footer-link">About Us (Est. 1975)</a></li>
+            <li><a href="industries.html" class="footer-link">Industries & Applications</a></li>
+            <li><a href="locations.html" class="footer-link">3 Mumbai Locations</a></li>
+            <li><a href="faq.html" class="footer-link">FAQ</a></li>
+            <li><a href="contact.html" class="footer-link">Contact & Sales</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Key Product Categories</h4>
+          <ul class="footer-links">
+            <li><a href="product.html?p=u-bolts" class="footer-link">U-Bolts & Clamps</a></li>
+            <li><a href="product.html?p=pipe-clamps" class="footer-link">Pipe Support Clamps</a></li>
+            <li><a href="product.html?p=pipe-hooks" class="footer-link">Pipe Hooks & Hangers</a></li>
+            <li><a href="product.html?p=studs-threaded-products" class="footer-link">Studs & Threaded Rods (B7)</a></li>
+            <li><a href="product.html?p=two-h-nuts" class="footer-link">2H Heavy Hex Nuts</a></li>
+            <li><a href="product.html?p=hex-bolts" class="footer-link">High-Tensile Hex Bolts</a></li>
+            <li><a href="product.html?p=foundation-bolts" class="footer-link">Foundation Anchor Bolts</a></li>
+            <li><a href="product.html?p=bitumen-washers" class="footer-link">Bitumen Washers (Dambar)</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Customer-Facing Branches</h4>
+          <div class="footer-branch-item">
+            <div class="footer-branch-name">Main Branch — Kumbharwada</div>
+            <div style="color: var(--color-text-dim);">67 Kumbharwada, Durgadevi St, Chor Bazaar, Mumbai – 400004</div>
+          </div>
+          <div class="footer-branch-item">
+            <div class="footer-branch-name">Good Luck Traders — Nagdevi</div>
+            <div style="color: var(--color-text-dim);">Karani Niwas, Shop No. 3, before 34, Nagdevi St, Mumbai – 400003</div>
+          </div>
+          <div class="footer-branch-item">
+            <div class="footer-branch-name">Good Luck Hardware — Bibijan St</div>
+            <div style="color: var(--color-text-dim);">15/17 Bibijan Street, Shop No. 3, Nagdevi, Mumbai – 400003</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 1975 – 2026 Good Luck Nut Bolt Corporation (GLNBC). All rights reserved.</div>
+        <div>Sales: +91 98214 41071 / 88280 68873 • Mumbai, Maharashtra</div>
       </div>
     </div>
   </footer>
@@ -191,6 +289,3 @@
   <script src="assets/js/main.js"></script>
 </body>
 </html>
-
-
-

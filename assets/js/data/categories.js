@@ -1,6 +1,10 @@
 /**
  * Good Luck Nut Bolt Corporation (GLNBC)
  * Single Source of Truth: Industrial Product Categories
+ * Grounded in Owner Guidelines:
+ * - "Cable Management" includes Z-Channel, C-Channel, C-Patti, Z-Patti, and Cable Trays
+ * - "Fasteners" includes all Bolts, Studs, Anchors, Foundation Bolts, Screws, and Fixings
+ * - Rawl Bolt and Rawl Anchor are unified as the same product
  */
 
 const GLNBC_CATEGORIES = [
@@ -9,25 +13,16 @@ const GLNBC_CATEGORIES = [
     slug: "u-bolts-clamps",
     name: "U-Bolts & Clamps",
     tagline: "Flagship Specialist Products",
-    description: "Standard and custom U-bolts, pipe support clamps, and heavy mounting hardware.",
+    description: "Standard round/square bend U-bolts, single & double pipe clamps, double-wire hose clamps, rubber acoustic clamps, and PP hydraulic clamps.",
     icon: "circle-dot",
-    featured: true
-  },
-  {
-    id: "clamps-brackets",
-    slug: "clamps-brackets",
-    name: "Clamps & Brackets",
-    tagline: "Industrial Piping & Structural Clamping",
-    description: "Hi-Tech, Rubber, PP, Pipe, Saddle, Beam, Wire, and U-Clamps for industrial installations.",
-    icon: "git-commit",
     featured: true
   },
   {
     id: "fasteners",
     slug: "fasteners",
-    name: "Fasteners & Bolts",
-    tagline: "High-Strength Bolts, Screws & Studs",
-    description: "Hex bolts, Allen cap bolts, CSK bolts, Eye bolts, Foundation bolts, and Threaded studs.",
+    name: "Fasteners & Fixings",
+    tagline: "High-Strength Bolts, Studs, Anchors & Screws",
+    description: "High-tensile hex bolts, B7 studs, wedge & pin-type anchors, rawl bolts/anchors, bullet fasteners, foundation bolts, T-bolts, CSK bolts, Allen cap bolts, and cement nails.",
     icon: "shield",
     featured: true
   },
@@ -35,64 +30,55 @@ const GLNBC_CATEGORIES = [
     id: "nuts",
     slug: "nuts",
     name: "Industrial Nuts",
-    tagline: "High-Grade & Specialty Nuts",
-    description: "2H Heavy Hex Nuts, Long Nuts, Cage Nuts, Lock Nuts, and Strut Channel Spring Nuts.",
+    tagline: "Heavy Hex, Nylock, Wing & Specialty Nuts",
+    description: "2H Heavy Hex Nuts, Standard Hex Nuts, Wing/Butterfly Nuts, Eye Nuts, Long Coupling Nuts, Cage Nuts, and Strut Channel Spring Nuts.",
     icon: "hexagon",
-    featured: true
-  },
-  {
-    id: "anchors",
-    slug: "anchors",
-    name: "Anchors & Fixings",
-    tagline: "Masonry & Concrete Anchoring",
-    description: "Pin-Type anchors, Rawl bolt fasteners, and heavy-duty concrete anchor systems.",
-    icon: "anchor",
     featured: true
   },
   {
     id: "washers",
     slug: "washers",
     name: "Washers & Gaskets",
-    tagline: "Sealing & Load Distribution",
-    description: "Bitumen (Dambar) washers, PVC rubber washers, Rip-Lock washers, and Umbrella washers.",
+    tagline: "Sealing, Load Distribution & Locking",
+    description: "Bitumen (Dambar) waterproofing washers, Plain/Flat washers, Spring washers, Rip-Lock washers, and Galvanized Umbrella washers.",
     icon: "disc",
-    featured: true
-  },
-  {
-    id: "screws",
-    slug: "screws",
-    name: "Industrial Screws",
-    tagline: "Self-Drilling & Machine Screws",
-    description: "Self-drilling screws, Button head screws, and Countersunk (CSK) machine screws.",
-    icon: "crosshair",
     featured: true
   },
   {
     id: "hooks-brackets",
     slug: "hooks-brackets",
-    name: "Hooks & Brackets",
-    tagline: "Mounting & Support Brackets",
-    description: "J-Hooks, L-Hooks, Screw Hooks, Heavy Wall Brackets, and Z-Brackets.",
+    name: "Hooks & Mounting",
+    tagline: "Piping & Structural Hanging Hardware",
+    description: "Threaded Pipe Hooks, J-Hooks, L-Hooks, Screw Hooks, and Heavy-Duty Structural Wall Brackets.",
     icon: "corner-up-right",
     featured: true
   },
   {
     id: "cable-management",
     slug: "cable-management",
-    name: "Cable Management",
-    tagline: "Trays & Electrical Support",
-    description: "Perforated cable trays and routing hardware for commercial & industrial power lines.",
+    name: "Cable Management & Channels",
+    tagline: "Trays, C-Channels & Z-Patti Supports",
+    description: "Perforated cable trays, Channel trays, C-Channel brackets (C Patti), Z-Brackets (Z Patti), and strut channel framing accessories.",
     icon: "layers",
+    featured: true
+  },
+  {
+    id: "screws",
+    slug: "screws",
+    name: "Industrial Screws",
+    tagline: "Self-Drilling & Precision Machine Screws",
+    description: "Self-drilling screws (SDS), Button head socket screws, and Countersunk (CSK) machine screws.",
+    icon: "crosshair",
     featured: false
   },
   {
-    id: "brackets-misc",
-    slug: "brackets-misc",
-    name: "Brackets & Miscellaneous",
-    tagline: "Channel Brackets & Protective Hardware",
-    description: "C-Channel Brackets (C Patti) and protective PVC caps for structural ends.",
+    id: "branded-hardware",
+    slug: "branded-hardware",
+    name: "Branded Fasteners & Couplers",
+    tagline: "Trading Lines & Structural Couplers",
+    description: "Branded anchors (Hilti, Fischer, TVS, Unbrako) and heavy-duty scaffolding forged & sheet couplers.",
     icon: "box",
-    featured: false
+    featured: true
   }
 ];
 

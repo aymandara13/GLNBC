@@ -1,13 +1,13 @@
 /**
  * GLNBC Main JavaScript Module
- * Navigation, Fast Multi-Tier Search Modal, Accordions, Helpers & Analytics Hooks
+ * Navigation, Hero Slider (Rolling Pictures), Multi-Image Card Flipper, Fast Multi-Tier Search, Accordions, Helpers
  */
 
 document.addEventListener('DOMContentLoaded', () => {
   initMobileNav();
   initAccordions();
   initGlobalSearch();
-  initAnalyticsTriggers();
+  initHeroSlider();
 });
 
 // ==========================================
@@ -39,7 +39,122 @@ function initMobileNav() {
 }
 
 // ==========================================
-// Accordions (FAQ & Also Deal In)
+// Hero Slider (Rolling Pictures - amioptics inspiration)
+// ==========================================
+function initHeroSlider() {
+  const slides = document.querySelectorAll('.hero-slide');
+  const dots = document.querySelectorAll('.hero-dot');
+  const prevBtn = document.querySelector('.hero-prev-btn');
+  const nextBtn = document.querySelector('.hero-next-btn');
+  const wrapper = document.querySelector('.hero-slider-wrapper');
+
+  if (!slides.length) return;
+
+  let currentSlide = 0;
+  let slideInterval = null;
+
+  function goToSlide(index) {
+    slides.forEach((s, idx) => {
+      s.classList.toggle('active', idx === index);
+    });
+    dots.forEach((d, idx) => {
+      d.classList.toggle('active', idx === index);
+    });
+    currentSlide = index;
+  }
+
+  function nextSlide() {
+    const next = (currentSlide + 1) % slides.length;
+    goToSlide(next);
+  }
+
+  function prevSlide() {
+    const prev = (currentSlide - 1 + slides.length) % slides.length;
+    goToSlide(prev);
+  }
+
+  function startAutoPlay() {
+    stopAutoPlay();
+    slideInterval = setInterval(nextSlide, 5000);
+  }
+
+  function stopAutoPlay() {
+    if (slideInterval) clearInterval(slideInterval);
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      nextSlide();
+      startAutoPlay();
+    });
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      prevSlide();
+      startAutoPlay();
+    });
+  }
+
+  dots.forEach((dot, idx) => {
+    dot.addEventListener('click', () => {
+      goToSlide(idx);
+      startAutoPlay();
+    });
+  });
+
+  if (wrapper) {
+    wrapper.addEventListener('mouseenter', stopAutoPlay);
+    wrapper.addEventListener('mouseleave', startAutoPlay);
+  }
+
+  startAutoPlay();
+}
+
+// ==========================================
+// Card Multi-Image Quick Navigation Flipper
+// ==========================================
+const cardImageIndices = {};
+
+window.changeCardImage = function(event, prodSlug, step) {
+  if (event) {
+    event.stopPropagation();
+    event.preventDefault();
+  }
+
+  if (typeof GLNBC_PRODUCTS === 'undefined') return;
+  const prod = GLNBC_PRODUCTS.find(p => p.slug === prodSlug);
+  if (!prod) return;
+
+  const allImages = [prod.heroImage, ...(prod.galleryImages || [])].filter(Boolean);
+  if (allImages.length <= 1) return;
+
+  if (typeof cardImageIndices[prodSlug] === 'undefined') {
+    cardImageIndices[prodSlug] = 0;
+  }
+
+  cardImageIndices[prodSlug] = (cardImageIndices[prodSlug] + step + allImages.length) % allImages.length;
+  const newIndex = cardImageIndices[prodSlug];
+
+  const cardElem = document.querySelector(`[data-product-slug="${prodSlug}"]`);
+  if (cardElem) {
+    const imgElem = cardElem.querySelector('.product-card-media img');
+    if (imgElem) {
+      imgElem.src = allImages[newIndex];
+    }
+    const counterElem = cardElem.querySelector('.card-img-counter');
+    if (counterElem) {
+      counterElem.textContent = `${newIndex + 1}/${allImages.length}`;
+    }
+  }
+};
+
+window.openProductPage = function(prodSlug) {
+  window.location.href = `product.html?p=${encodeURIComponent(prodSlug)}`;
+};
+
+// ==========================================
+// Accordions (FAQ & Branded Ranges)
 // ==========================================
 function initAccordions() {
   const accordions = document.querySelectorAll('.accordion');
@@ -51,7 +166,6 @@ function initAccordions() {
     header.addEventListener('click', () => {
       const isActive = acc.classList.contains('active');
       
-      // If in accordion-group with single-open, close others
       const group = acc.closest('.accordion-group');
       if (group && group.dataset.single === 'true') {
         group.querySelectorAll('.accordion').forEach(other => {
@@ -95,14 +209,12 @@ function initGlobalSearch() {
       renderSearchResults(results, dropdown, query);
     });
 
-    // Close on click outside
     document.addEventListener('click', (e) => {
       if (!wrapper.contains(e.target)) {
         dropdown.classList.remove('active');
       }
     });
 
-    // Enter key submits to catalogue page
     input.addEventListener('keydown', (e) => {
       if (e.key === 'Enter') {
         const query = input.value.trim();
@@ -124,13 +236,11 @@ function searchProducts(query) {
     const matchName = cleanName.includes(cleanQuery);
     const matchCat = cleanCat.includes(cleanQuery);
     
-    // Check aliases
     const matchAlias = prod.aliases && prod.aliases.some(alias => {
       const cleanAlias = alias.toLowerCase().replace(/[-_\s]/g, '');
       return cleanAlias.includes(cleanQuery);
     });
 
-    // Check materials & grades
     const matchMaterial = prod.materials && prod.materials.some(mat => 
       mat.toLowerCase().includes(query)
     );
@@ -188,76 +298,20 @@ function renderSearchResults(results, container, query) {
 // WhatsApp Link Formatter
 // ==========================================
 function openWhatsAppQuote(productName = '', customMessage = '') {
-  const phone = (typeof GLNBC_COMPANY !== 'undefined' && GLNBC_COMPANY.contacts) ? GLNBC_COMPANY.contacts.whatsappPrimary : '919821441071';
-  let text = `Hello Good Luck Nut Bolt Corporation, `;
+  const phone = '919821441071';
+  let message = 'Hello Good Luck Nut Bolt Corporation (GLNBC), I would like to inquire about industrial fasteners.';
   
-  if (productName) {
-    text += `I would like to request a quote for ${productName}.`;
-  } else if (customMessage) {
-    text += customMessage;
-  } else {
-    text += `I would like to enquire about your industrial fastener and hardware products.`;
+  if (customMessage) {
+    message = customMessage;
+  } else if (productName) {
+    message = `Hello GLNBC, I would like to request a price quotation for: *${productName}*. Please provide size availability and rates.`;
   }
-
-  const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+  
+  const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
   window.open(url, '_blank');
-}
-
-// ==========================================
-// Toast Notification
-// ==========================================
-function showToast(message, type = 'info') {
-  let container = document.getElementById('toast-container');
-  if (!container) {
-    container = document.createElement('div');
-    container.id = 'toast-container';
-    container.style.cssText = 'position:fixed;bottom:24px;right:24px;z-index:9999;display:flex;flex-direction:column;gap:8px;';
-    document.body.appendChild(container);
-  }
-
-  const toast = document.createElement('div');
-  toast.style.cssText = `
-    background-color: #1C1C1C;
-    color: #FFFFFF;
-    padding: 12px 20px;
-    border-radius: 6px;
-    font-size: 14px;
-    font-weight: 500;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-    border-left: 4px solid ${type === 'success' ? '#25D366' : '#3E6B8A'};
-    transition: opacity 300ms ease;
-  `;
-  toast.textContent = message;
-  container.appendChild(toast);
-
-  setTimeout(() => {
-    toast.style.opacity = '0';
-    setTimeout(() => toast.remove(), 300);
-  }, 3500);
-}
-
-// ==========================================
-// Analytics Event Logging
-// ==========================================
-function initAnalyticsTriggers() {
-  document.addEventListener('click', (e) => {
-    const target = e.target.closest('[data-track]');
-    if (!target) return;
-    const eventName = target.dataset.track;
-    const eventLabel = target.dataset.trackLabel || '';
-    
-    // Log structured event (ready for GTM / GA4)
-    if (typeof window.dataLayer !== 'undefined') {
-      window.dataLayer.push({
-        event: eventName,
-        event_label: eventLabel,
-        timestamp: new Date().toISOString()
-      });
-    }
-  });
 }
 
 function escapeHtml(str) {
   if (!str) return '';
-  return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#039;');
 }

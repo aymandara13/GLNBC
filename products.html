@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -7,13 +7,16 @@
   <meta name="description" content="Browse all 45 industrial products supplied by Good Luck Nut Bolt Corporation: U-Bolts, Pipe Clamps, Pipe Hooks, Nuts, Bolts, B7 Studs, Anchors, Washers, and Screws in standard & custom dimensions.">
   <meta name="keywords" content="fasteners products Mumbai, U-bolts catalogue, clamps catalogue, industrial nuts bolts Mumbai, high tensile fasteners, stainless steel bolts Mumbai">
   
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/images/brand/favicon.png">
+  
+  <!-- CSS Design System -->
   <link rel="stylesheet" href="assets/css/variables.css">
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/components.css">
   <link rel="stylesheet" href="assets/css/layout.css">
 </head>
-<body>
+<body class="bg-cad-steel">
 
   <!-- Top Bar -->
   <div class="top-bar">
@@ -27,6 +30,8 @@
         <a href="tel:8828068873">Enquiry: +91 88280 68873</a>
         <span style="opacity: 0.3;">|</span>
         <a href="locations.html">3 Mumbai Branches</a>
+        <span style="opacity: 0.3;">|</span>
+        <a href="https://share.google/fnx7M4NKP5fzHsoLj" target="_blank" rel="noopener noreferrer" style="color: #60A5FA;">★ Google Profile</a>
       </div>
     </div>
   </div>
@@ -69,20 +74,22 @@
     <div class="mobile-nav-links">
       <a href="index.html" class="mobile-nav-link">Home</a>
       <a href="products.html" class="mobile-nav-link active">Products <span>45 Items</span></a>
-      <a href="about.html" class="mobile-nav-link">About Us</a>
+      <a href="about.html" class="mobile-nav-link">About Us <span>50+ Years</span></a>
       <a href="industries.html" class="mobile-nav-link">Industries & Applications</a>
       <a href="locations.html" class="mobile-nav-link">3 Mumbai Locations</a>
       <a href="faq.html" class="mobile-nav-link">FAQ</a>
       <a href="contact.html" class="mobile-nav-link">Contact</a>
     </div>
-    <div style="margin-top: auto;">
+    <div style="margin-top: auto; display: flex; flex-direction: column; gap: 10px;">
       <a href="request-a-quote.html" class="btn btn-primary btn-lg w-full">Get a Quote</a>
+      <button type="button" class="btn btn-whatsapp btn-lg w-full" onclick="openWhatsAppQuote()">WhatsApp Us</button>
+      <a href="https://share.google/fnx7M4NKP5fzHsoLj" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm w-full" style="text-align: center;">View Google Profile ★</a>
     </div>
   </div>
 
   <main>
     <!-- Catalogue Header Banner (UI Reference 1 Search & Quick Tags) -->
-    <section class="section-dark" style="padding: 44px 0 36px 0;">
+    <section class="section-dark bg-blueprint" style="padding: 44px 0 36px 0;">
       <div class="container">
         <span class="section-eyebrow">Product Discovery</span>
         <h1 style="color: white; font-size: clamp(1.8rem, 3vw, 2.5rem); margin-bottom: 10px;">
@@ -93,7 +100,7 @@
         </p>
 
         <!-- Accessible Search Bar with Quick Pills (UI Reference 1) -->
-        <div class="search-wrapper" style="margin-top: 24px; max-width: 700px;">
+        <div class="search-wrapper" style="margin-top: 24px; max-width: 780px;">
           <div class="search-input-group">
             <svg class="search-icon-left" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
             <input type="text" id="catalogue-search-input" class="search-input" placeholder="Search by name, grade, standard or alias (e.g. U-Bolt, B7 Stud, 2H Nut, Pipe Hook, Wedge Anchor)..." aria-label="Search industrial products">
@@ -109,6 +116,7 @@
             <button type="button" class="search-pill" data-quick-tag="Pipe Hook">Pipe Hooks</button>
             <button type="button" class="search-pill" data-quick-tag="Pipe Clamp">Pipe Clamps</button>
             <button type="button" class="search-pill" data-quick-tag="Wedge Anchor">Wedge Anchors</button>
+            <button type="button" class="search-pill" data-quick-tag="Foundation Bolt">Foundation Bolts</button>
             <button type="button" class="search-pill" data-quick-tag="Bitumen">Bitumen Washers</button>
             <button type="button" class="search-pill" data-quick-tag="Stainless Steel">Stainless Steel</button>
           </div>
@@ -123,10 +131,10 @@
         <div class="tab-list">
           <button type="button" class="tab-btn active" data-filter-status="all">All Products (45)</button>
           <button type="button" class="tab-btn" data-filter-category="u-bolts-clamps">U-Bolts & Clamps</button>
-          <button type="button" class="tab-btn" data-filter-category="fasteners">Bolts & Studs</button>
+          <button type="button" class="tab-btn" data-filter-category="fasteners">Fasteners & Fixings</button>
           <button type="button" class="tab-btn" data-filter-category="nuts">Nuts</button>
-          <button type="button" class="tab-btn" data-filter-category="anchors">Anchors</button>
           <button type="button" class="tab-btn" data-filter-category="washers">Washers</button>
+          <button type="button" class="tab-btn" data-filter-category="cable-management">Cable Management</button>
           <button type="button" class="tab-btn" data-filter-status="branded">Branded Lines (9)</button>
         </div>
 
@@ -136,15 +144,14 @@
             <!-- Category Pills -->
             <div style="display: flex; flex-wrap: wrap; gap: 6px;" id="category-pills-container">
               <button type="button" class="btn btn-sm btn-outline active" data-filter-category="all">All Categories</button>
-              <button type="button" class="btn btn-sm btn-outline" data-filter-category="u-bolts-clamps">U-Bolts</button>
-              <button type="button" class="btn btn-sm btn-outline" data-filter-category="clamps-brackets">Clamps</button>
-              <button type="button" class="btn btn-sm btn-outline" data-filter-category="fasteners">Bolts & Studs</button>
+              <button type="button" class="btn btn-sm btn-outline" data-filter-category="u-bolts-clamps">U-Bolts & Clamps</button>
+              <button type="button" class="btn btn-sm btn-outline" data-filter-category="fasteners">Fasteners & Fixings</button>
               <button type="button" class="btn btn-sm btn-outline" data-filter-category="nuts">Nuts</button>
-              <button type="button" class="btn btn-sm btn-outline" data-filter-category="anchors">Anchors</button>
               <button type="button" class="btn btn-sm btn-outline" data-filter-category="washers">Washers</button>
+              <button type="button" class="btn btn-sm btn-outline" data-filter-category="hooks-brackets">Hooks & Mounting</button>
+              <button type="button" class="btn btn-sm btn-outline" data-filter-category="cable-management">Cable Management</button>
               <button type="button" class="btn btn-sm btn-outline" data-filter-category="screws">Screws</button>
-              <button type="button" class="btn btn-sm btn-outline" data-filter-category="hooks-brackets">Hooks</button>
-              <button type="button" class="btn btn-sm btn-outline" data-filter-category="cable-management">Cable Mgmt</button>
+              <button type="button" class="btn btn-sm btn-outline" data-filter-category="branded-hardware">Branded Lines</button>
             </div>
 
             <!-- Material Dropdown & Reset -->
@@ -168,7 +175,7 @@
 
           <!-- Live Systematic Product Grid (UI Reference 3) -->
           <div class="product-grid" id="catalogue-grid">
-            <!-- Rendered systematically by catalogue.js -->
+            <!-- Rendered systematically by catalogue.js with multi-image flippers -->
           </div>
 
           <!-- Custom Requirement Notice -->
@@ -187,13 +194,13 @@
     </section>
   </main>
 
-  <!-- Footer -->
+  <!-- Footer with High-Visibility Logo -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
         <div>
           <div class="brand" style="margin-bottom: 16px;">
-            <img src="assets/images/brand/glnbc-logo.png" alt="GLNBC - Good Luck Nut Bolt Corporation" class="brand-logo-img" style="filter: brightness(0) invert(1); height: 48px;">
+            <img src="assets/images/brand/glnbc-logo.png" alt="GLNBC - Good Luck Nut Bolt Corporation" class="footer-brand-logo">
           </div>
           <p style="color: var(--color-text-dim); font-size: 13px; line-height: 1.6; margin-bottom: 16px;">
             Established in 1975. Over 50 years of trusted supply of industrial fasteners, U-bolts, pipe clamps, high-tensile studs, nuts, bolts, and hardware in Mumbai.
@@ -201,7 +208,8 @@
           <div style="font-size: 13px; color: white;">
             <strong>Sales Contacts:</strong><br>
             Phone: <a href="tel:9821441071" style="color: #79A9C9;">+91 98214 41071</a> / <a href="tel:8828068873" style="color: #79A9C9;">88280 68873</a><br>
-            Email: <a href="mailto:goodlucknutbol@gmail.com" style="color: #79A9C9;">goodlucknutbol@gmail.com</a>
+            Email: <a href="mailto:goodlucknutbol@gmail.com" style="color: #79A9C9;">goodlucknutbol@gmail.com</a><br>
+            Google Profile: <a href="https://share.google/fnx7M4NKP5fzHsoLj" target="_blank" rel="noopener noreferrer" style="color: #60A5FA;">View Reviews & Maps ★</a>
           </div>
         </div>
 
@@ -275,4 +283,3 @@
   <script src="assets/js/catalogue.js"></script>
 </body>
 </html>
-

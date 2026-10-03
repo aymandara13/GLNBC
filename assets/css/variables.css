@@ -2,54 +2,56 @@
  * GLNBC Design Tokens & CSS Custom Properties
  * Brand Identity Palette:
  * - Gunmetal Steel: #2C333B, #3D4752, #1E2328
- * - Matte Black / Carbon: #121417, #181B1F, #22252A
- * - Metallic Industrial Navy Blue (Logo Corner Accent): #0F4C81, #155E9C, #0A3358, #EBF3FA
- * - Clean Steel Whites & Greys: #FFFFFF, #F4F6F9, #D4DCE4
+ * - Deep Charcoal / Carbon: #121519, #16191E, #1E2229
+ * - Signature Metallic Industrial Navy Blue: #0F4C81, #1E75BB, #0090FF, #EBF3FA
+ * - Steel Neutral Surfaces: #FFFFFF, #F4F6F9, #D4DCE4
  */
 
 :root {
   /* Core Brand Colors - Grounded in GLNBC Official Logo */
   --color-gunmetal: #2C333B;
   --color-gunmetal-light: #3D4752;
-  --color-gunmetal-dark: #1E2328;
-  --color-gunmetal-border: #4A5562;
+  --color-gunmetal-dark: #1A1F24;
+  --color-gunmetal-border: #3E4956;
   
-  --color-deep-black: #121417;
-  --color-carbon-black: #181B1F;
-  --color-black-card: #1E2126;
+  --color-deep-black: #121519;
+  --color-carbon-black: #16191E;
+  --color-black-card: #1C2027;
   
-  /* Signature Industrial Navy Blue (Hexagonal Logo Top-Right Facet & Accents) */
+  /* Signature Industrial Navy Blue (#0F4C81) & Vibrant Accents */
   --color-industrial-blue: #0F4C81;
-  --color-blue-hover: #155E9C;
+  --color-blue-hover: #165E9E;
   --color-blue-dark: #0A3358;
+  --color-blue-accent: #1E75BB;
+  --color-blue-bright: #0090FF;
   --color-blue-subtle: #EBF3FA;
-  --color-blue-glow: rgba(15, 76, 129, 0.22);
+  --color-blue-glow: rgba(15, 76, 129, 0.28);
   --color-blue-light: #2A72B2;
   
   /* Steel Neutral Surfaces */
   --color-cool-grey: #EEF2F6;
   --color-cool-grey-light: #F7F9FB;
   --color-cool-grey-border: #D2DBE4;
-  --color-grey-muted: #5C6675;
-  --color-steel-surface: #E3E9F0;
+  --color-grey-muted: #64748B;
+  --color-steel-surface: #E2E8F0;
   
   --color-white: #FFFFFF;
-  --color-text-dark: #121417;
-  --color-text-muted: #4A5463;
-  --color-text-light: #F5F7FA;
-  --color-text-dim: #9AA5B5;
+  --color-text-dark: #0F172A;
+  --color-text-muted: #475569;
+  --color-text-light: #F8FAFC;
+  --color-text-dim: #94A3B8;
 
   /* Functional Colors */
-  --color-success: #1E7E34;
-  --color-success-bg: #E8F5E9;
+  --color-success: #16A34A;
+  --color-success-bg: #DCFCE7;
   --color-whatsapp: #25D366;
   --color-whatsapp-hover: #20BA5A;
-  --color-warning: #B78103;
-  --color-warning-bg: #FEF9E7;
-  --color-accent-amber: #D97706;
+  --color-warning: #D97706;
+  --color-warning-bg: #FEF3C7;
+  --color-accent-amber: #F59E0B;
 
   /* Typography */
-  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-mono: 'JetBrains Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
   
   --font-size-xs: 0.75rem;     /* 12px */
@@ -70,7 +72,7 @@
   --font-weight-extrabold: 800;
   --font-weight-black: 900;
 
-  --letter-spacing-tight: -0.025em;
+  --letter-spacing-tight: -0.03em;
   --letter-spacing-normal: 0;
   --letter-spacing-wide: 0.03em;
   --letter-spacing-wider: 0.06em;
@@ -92,25 +94,24 @@
 
   /* Borders & Radii */
   --radius-sm: 4px;
-  --radius-md: 6px;
-  --radius-lg: 10px;
-  --radius-xl: 14px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
   --radius-full: 9999px;
 
   /* Shadows (Subtle, crisp industrial depth) */
-  --shadow-sm: 0 1px 3px rgba(18, 20, 23, 0.06);
-  --shadow-md: 0 4px 10px -1px rgba(18, 20, 23, 0.08), 0 2px 4px -1px rgba(18, 20, 23, 0.04);
-  --shadow-lg: 0 12px 24px -4px rgba(18, 20, 23, 0.12), 0 4px 8px -2px rgba(18, 20, 23, 0.06);
-  --shadow-card: 0 1px 4px rgba(18, 20, 23, 0.06), 0 2px 8px rgba(18, 20, 23, 0.04);
-  --shadow-blue-glow: 0 0 0 3px rgba(15, 76, 129, 0.25);
+  --shadow-sm: 0 1px 3px rgba(18, 21, 25, 0.08);
+  --shadow-md: 0 4px 12px -1px rgba(18, 21, 25, 0.1), 0 2px 6px -1px rgba(18, 21, 25, 0.06);
+  --shadow-lg: 0 16px 32px -4px rgba(18, 21, 25, 0.16), 0 6px 12px -2px rgba(18, 21, 25, 0.08);
+  --shadow-blue-glow: 0 0 0 3px rgba(15, 76, 129, 0.3);
 
   /* Layout Widths */
   --container-max: 1280px;
-  --header-height: 80px;
+  --header-height: 84px;
   --bottom-bar-height: 64px;
 
   /* Transitions */
   --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
