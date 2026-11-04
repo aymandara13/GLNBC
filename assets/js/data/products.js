@@ -248,10 +248,7 @@ const GLNBC_PRODUCTS = [
     category: "U-Bolts & Clamps",
     categorySlug: "u-bolts-clamps",
     heroImage: "assets/images/products/double_wire_hose_clamp_hd.jpg",
-    galleryImages: [
-      "assets/images/products/double%20wire%20hose%20clamp.png",
-      "assets/images/products/Hose%20Clips.jpg"
-    ],
+    galleryImages: [],
     imageStatus: "EXACT_MATCH",
     aliases: ["Double Wire Hose Clamp", "Wire Hose Clamp", "Spiral Hose Clamp", "Double Wire Spring Clamp", "Screw Wire Hose Clamp"],
     shortDesc: "Heavy-duty double spring steel wire hose clamps engineered for high-pressure spiral hose and suction pipe sealing.",
@@ -413,7 +410,7 @@ const GLNBC_PRODUCTS = [
   {
     id: "foundation-bolts",
     slug: "foundation-bolts",
-    name: "Foundation Bolts (L-Type, Y-Type, Gulli & Plate)",
+    name: "Foundation Bolts (L-Type, Y-Type, T-Type & Plate)",
     visibilityTier: "Primary",
     status: "Primary",
     category: "Fasteners & Fixings",
@@ -427,9 +424,9 @@ const GLNBC_PRODUCTS = [
       "assets/images/products/L%20foundation.jpg"
     ],
     imageStatus: "EXACT_MATCH",
-    aliases: ["Foundation Bolt", "Anchor Bolt", "L-Type Foundation Bolt", "J-Type Foundation Bolt", "Y-Type Foundation Bolt", "Plate Foundation Bolt", "Gulli Foundation Bolt", "Gulli Bolt", "Rag Bolt", "Structural Anchor Bolt"],
-    shortDesc: "Heavy structural foundation anchor bolts in L-bend, J-bend, Y-split, Plate-anchor, and Gulli (cotter-pin) designs for heavy civil concrete casting and column footings.",
-    description: "Good Luck Nut Bolt Corporation manufactures heavy-duty civil and structural Foundation Bolts engineered to anchor structural steel columns, machinery base plates, and pre-engineered building (PEB) columns into reinforced concrete footings. Available in all standard civil geometries: L-Type, J-Type, Y-Type split, welded Anchor Plate type, and traditional Gulli (cross-pin / cotter-bar) foundation bolts.",
+    aliases: ["Foundation Bolt", "Anchor Bolt", "L-Type Foundation Bolt", "J-Type Foundation Bolt", "Y-Type Foundation Bolt", "Plate Foundation Bolt", "T Foundation Bolt", "T-Type Foundation Bolt", "Rag Bolt", "Structural Anchor Bolt"],
+    shortDesc: "Heavy structural foundation anchor bolts in L-bend, J-bend, Y-split, Plate-anchor, and T-type designs for heavy civil concrete casting and column footings.",
+    description: "Good Luck Nut Bolt Corporation manufactures heavy-duty civil and structural Foundation Bolts engineered to anchor structural steel columns, machinery base plates, and pre-engineered building (PEB) columns into reinforced concrete footings. Available in all standard civil geometries: L-Type, J-Type, Y-Type split, welded Anchor Plate type, and traditional T-type foundation bolts.",
     applications: ["PEB Column Base Footings", "Heavy Industrial Machinery Grouting", "High-Mast Lighting & Transmission Towers", "Bridge Piers & Crane Rail Anchoring"],
     materials: ["Mild Steel (IS 2062)", "High Tensile Carbon Steel (EN8, EN19)", "Stainless Steel (SS 304, SS 316)"],
     grades: ["Grade 4.6", "Grade 8.8", "Grade 10.9", "IS 5624", "EN8", "EN19"],
@@ -543,20 +540,17 @@ const GLNBC_PRODUCTS = [
   {
     id: "csk-bolts",
     slug: "csk-bolts",
-    name: "CSK Bolts (Countersunk Flat Head Bolts)",
+    name: "Allen CSK Bolts (Socket Countersunk Bolts)",
     visibilityTier: "Primary",
     status: "Primary",
     category: "Fasteners & Fixings",
     categorySlug: "fasteners",
     heroImage: "assets/images/products/Countersunk%20Bolts.jpg",
-    galleryImages: [
-      "assets/images/products/csk%20bolt.jpg",
-      "assets/images/products/csk.jpg"
-    ],
+    galleryImages: [],
     imageStatus: "EXACT_MATCH",
     aliases: ["CSK Bolt", "Countersunk Bolt", "Flat Head Machine Bolt", "Socket Countersunk Bolt", "Hex Socket CSK Bolt"],
     shortDesc: "Countersunk flat-head bolts engineered for flush-surface finishes in sliding tracks, floor plates, and structural machinery joints.",
-    description: "Good Luck Nut Bolt Corporation supplies Countersunk (CSK) Bolts with 90-degree conical flat heads designed to sit completely flush with workpiece surfaces. Available in internal hex socket drive and slotted drive in High Tensile Grade 10.9/12.9, Mild Steel, and Stainless Steel.",
+    description: "Good Luck Nut Bolt Corporation supplies Countersunk (CSK) Bolts with 90-degree conical flat heads designed to sit completely flush with workpiece surfaces. Available with internal hex socket drive in High Tensile Grade 10.9/12.9, Mild Steel, and Stainless Steel.",
     applications: ["Industrial Conveyor & Sliding Tracks", "Machine Tooling & Floor Plates", "Architectural Glazing & Flush Facades", "Automotive Bodywork"],
     materials: ["Alloy Steel (Grade 10.9 / 12.9)", "Mild Steel", "Stainless Steel (SS 304, SS 316)"],
     grades: ["Grade 10.9", "Grade 8.8", "SS 304", "SS 316"],
@@ -865,9 +859,7 @@ const GLNBC_PRODUCTS = [
     categorySlug: "nuts",
     heroImage: "assets/images/products/eye_nut_hd.jpg",
     galleryImages: [
-      "assets/images/products/eye_nut_forged.jpg",
-      "assets/images/products/lifting%20eye.jpg",
-      "assets/images/products/nut.jpg"
+      "assets/images/products/eye_nut_forged.jpg"
     ],
     imageStatus: "EXACT_MATCH",
     aliases: ["Eye Nut", "Lifting Eye Nut", "DIN 582 Eye Nut", "Female Eye Nut", "Forged Eye Nut", "Collar Eye Nut"],
@@ -1619,6 +1611,36 @@ const GLNBC_PRODUCTS = [
     priceNote: "Price Available on Request"
   }
 ];
+
+
+// Separate product lines, based on the supplied catalogue.
+GLNBC_PRODUCTS.push({
+  id: 'phillips-csk-bolts', slug: 'phillips-csk-bolts', name: 'Phillips CSK Bolts',
+  visibilityTier: 'Primary', category: 'Fasteners & Fixings', categorySlug: 'fasteners',
+  heroImage: 'assets/images/products/csk%20bolt.jpg', galleryImages: [],
+  aliases: ['Phillips countersunk bolt', 'Cross head CSK bolt'],
+  shortDesc: 'Cross-drive countersunk bolts for a flush finish.',
+  description: 'Phillips-drive countersunk bolts for applications requiring a flush head. Contact us for sizes, material and availability.',
+  materials: [], grades: [], finishes: [], standards: [], applications: [], compatibleComponents: [], relatedSlugs: ['csk-bolts', 'csk-screws'],
+  size: 'Available on request', customAvailable: false
+}, {
+  id: 'grub-screws', slug: 'grub-screws', name: 'Grub Screws',
+  visibilityTier: 'Primary', category: 'Industrial Screws', categorySlug: 'screws',
+  heroImage: '', galleryImages: [], aliases: ['Set screws', 'Grub screw'],
+  shortDesc: 'Headless set screws for securing components in place.',
+  description: 'Grub screws, also known as set screws, are available on enquiry. Share the size, material and point style you need.',
+  materials: [], grades: [], finishes: [], standards: [], applications: [], compatibleComponents: [], relatedSlugs: ['allen-cap-bolts'],
+  size: 'Available on request', customAvailable: false
+});
+// Avoid repeated image paths within a product's gallery.
+GLNBC_PRODUCTS.forEach(product => {
+  const seen = new Set(product.heroImage ? [decodeURIComponent(product.heroImage).toLowerCase()] : []);
+  product.galleryImages = (product.galleryImages || []).filter(image => {
+    const key = decodeURIComponent(image).toLowerCase();
+    if (seen.has(key)) return false;
+    seen.add(key); return true;
+  });
+});
 
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = { GLNBC_PRODUCTS };
