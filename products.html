@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Industrial Fasteners & Hardware Products (45 Lines) | GLNBC Mumbai</title>
-  <meta name="description" content="Browse all 45 industrial products supplied by Good Luck Nut Bolt Corporation: U-Bolts, Pipe Clamps, Pipe Hooks, Nuts, Bolts, B7 Studs, Anchors, Washers, and Screws in standard & custom dimensions.">
+  <title>Industrial Fasteners & Hardware Products | GLNBC Mumbai</title>
+  <meta name="description" content="Browse all industrial products supplied by Good Luck Nut Bolt Corporation: U-Bolts, Pipe Clamps, Pipe Hooks, Nuts, Bolts, B7 Studs, Anchors, Washers, and Screws in standard & custom dimensions.">
   <meta name="keywords" content="fasteners products Mumbai, U-bolts catalogue, clamps catalogue, industrial nuts bolts Mumbai, high tensile fasteners, stainless steel bolts Mumbai">
   
   <!-- Favicon -->
@@ -31,7 +31,7 @@
         <span style="opacity: 0.3;">|</span>
         <a href="locations.html">3 Mumbai Branches</a>
         <span style="opacity: 0.3;">|</span>
-        <a href="https://share.google/fnx7M4NKP5fzHsoLj" target="_blank" rel="noopener noreferrer" style="color: #60A5FA;">★ Google Profile</a>
+        <a href="https://share.google/hFtLFiSH9dYBeKDcI" target="_blank" rel="noopener noreferrer" style="color: #60A5FA;">★ Google Profile</a>
       </div>
     </div>
   </div>
@@ -73,7 +73,7 @@
     </div>
     <div class="mobile-nav-links">
       <a href="index.html" class="mobile-nav-link">Home</a>
-      <a href="products.html" class="mobile-nav-link active">Products <span>45 Items</span></a>
+      <a href="products.html" class="mobile-nav-link active">Products</a>
       <a href="about.html" class="mobile-nav-link">About Us <span>50+ Years</span></a>
       <a href="industries.html" class="mobile-nav-link">Industries & Applications</a>
       <a href="locations.html" class="mobile-nav-link">3 Mumbai Locations</a>
@@ -83,7 +83,7 @@
     <div style="margin-top: auto; display: flex; flex-direction: column; gap: 10px;">
       <a href="request-a-quote.html" class="btn btn-primary btn-lg w-full">Get a Quote</a>
       <button type="button" class="btn btn-whatsapp btn-lg w-full" onclick="openWhatsAppQuote()">WhatsApp Us</button>
-      <a href="https://share.google/fnx7M4NKP5fzHsoLj" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm w-full" style="text-align: center;">View Google Profile ★</a>
+      <a href="https://share.google/hFtLFiSH9dYBeKDcI" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm w-full" style="text-align: center;">View Google Profile ★</a>
     </div>
   </div>
 
@@ -96,7 +96,7 @@
           Industrial Fasteners & Hardware Products
         </h1>
         <p style="color: var(--color-text-dim); max-width: 760px; font-size: 15px; line-height: 1.6;">
-          Explore all 45 precision industrial product lines stocked and supplied by GLNBC across our Mumbai trade branches. Filter by category, material, or keyword. Standard catalog sizes and custom fabrications to drawing are available on request.
+          Explore our industrial product lines stocked and supplied by GLNBC across our Mumbai trade branches. Filter by category, material, or keyword. Standard catalog sizes and custom fabrications to drawing are available on request.
         </p>
 
         <!-- Accessible Search Bar with Quick Pills (UI Reference 1) -->
@@ -127,50 +127,25 @@
     <!-- Catalogue Main Layout -->
     <section class="section" style="padding-top: 36px;">
       <div class="container">
-        <!-- Category & Group Filter Tabs -->
-        <div class="tab-list">
-          <button type="button" class="tab-btn active" data-filter-status="all">All Products (45)</button>
-          <button type="button" class="tab-btn" data-filter-category="u-bolts-clamps">U-Bolts & Clamps</button>
-          <button type="button" class="tab-btn" data-filter-category="fasteners">Fasteners & Fixings</button>
-          <button type="button" class="tab-btn" data-filter-category="nuts">Nuts</button>
-          <button type="button" class="tab-btn" data-filter-category="washers">Washers</button>
-          <button type="button" class="tab-btn" data-filter-category="cable-management">Cable Management</button>
-          <button type="button" class="tab-btn" data-filter-status="branded">Branded Lines (9)</button>
-        </div>
-
-        <div style="display: grid; grid-template-columns: 1fr; gap: 28px;" class="catalogue-layout">
-          <!-- Filter Controls Bar -->
-          <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; background-color: white; padding: 14px 20px; border: 1px solid var(--color-cool-grey-border); border-radius: var(--radius-md); box-shadow: var(--shadow-sm);">
-            <!-- Category Pills -->
-            <div style="display: flex; flex-wrap: wrap; gap: 6px;" id="category-pills-container">
-              <button type="button" class="btn btn-sm btn-outline active" data-filter-category="all">All Categories</button>
-              <button type="button" class="btn btn-sm btn-outline" data-filter-category="u-bolts-clamps">U-Bolts & Clamps</button>
-              <button type="button" class="btn btn-sm btn-outline" data-filter-category="fasteners">Fasteners & Fixings</button>
-              <button type="button" class="btn btn-sm btn-outline" data-filter-category="nuts">Nuts</button>
-              <button type="button" class="btn btn-sm btn-outline" data-filter-category="washers">Washers</button>
-              <button type="button" class="btn btn-sm btn-outline" data-filter-category="hooks-brackets">Hooks & Mounting</button>
-              <button type="button" class="btn btn-sm btn-outline" data-filter-category="cable-management">Cable Management</button>
-              <button type="button" class="btn btn-sm btn-outline" data-filter-category="screws">Screws</button>
-              <button type="button" class="btn btn-sm btn-outline" data-filter-category="branded-hardware">Branded Lines</button>
+        <div class="catalogue-layout">
+          <div class="catalogue-filters" aria-label="Product filters">
+            <div class="filter-heading"><div><span class="filter-overline">FIND YOUR FIT</span><h2>Browse by category</h2></div><button type="button" id="btn-reset-filters" class="filter-reset">Clear filters</button></div>
+            <div class="category-pills" id="category-pills-container" aria-label="Product category">
+              <button type="button" class="category-pill active" data-filter-category="all" aria-pressed="true">All products</button>
+              <button type="button" class="category-pill" data-filter-category="u-bolts-clamps" aria-pressed="false">U-bolts & clamps</button>
+              <button type="button" class="category-pill" data-filter-category="fasteners" aria-pressed="false">Fasteners & fixings</button>
+              <button type="button" class="category-pill" data-filter-category="nuts" aria-pressed="false">Nuts</button>
+              <button type="button" class="category-pill" data-filter-category="washers" aria-pressed="false">Washers</button>
+              <button type="button" class="category-pill" data-filter-category="hooks-brackets" aria-pressed="false">Hooks & mounting</button>
+              <button type="button" class="category-pill" data-filter-category="cable-management" aria-pressed="false">Cable management</button>
+              <button type="button" class="category-pill" data-filter-category="screws" aria-pressed="false">Screws</button>
+              <button type="button" class="category-pill" data-filter-category="branded-hardware" aria-pressed="false">Branded lines</button>
             </div>
-
-            <!-- Material Dropdown & Reset -->
-            <div style="display: flex; align-items: center; gap: 10px;">
-              <select id="material-filter-select" class="form-control" style="min-height: 38px; padding: 4px 12px; font-size: 13px; width: 170px;" aria-label="Filter by material">
-                <option value="all">All Materials</option>
-                <option value="Stainless Steel">Stainless Steel (SS)</option>
-                <option value="Mild Steel">Mild Steel (MS)</option>
-                <option value="Carbon Steel">Carbon / Alloy Steel</option>
-                <option value="High Tensile">High Tensile (8.8 / 10.9)</option>
-                <option value="Brass">Brass / Polymer</option>
-              </select>
-              <button type="button" id="btn-reset-filters" class="btn btn-sm btn-outline">Reset</button>
-            </div>
+            <div class="filter-material"><label for="material-filter-select">Material</label><select id="material-filter-select" class="form-control"><option value="all">All materials</option><option value="Stainless Steel">Stainless steel</option><option value="Mild Steel">Mild steel</option><option value="Carbon Steel">Carbon steel</option><option value="High Tensile">High tensile</option><option value="Brass">Brass</option></select></div>
           </div>
-
           <!-- Result Counter -->
-          <div id="catalogue-count" style="font-size: 14px; font-weight: 600; color: var(--color-grey-muted);">
-            Showing all 45 Industrial Products
+          <div id="catalogue-count" role="status" aria-live="polite" style="font-size: 14px; font-weight: 600; color: var(--color-grey-muted);">
+            Loading products…
           </div>
 
           <!-- Live Systematic Product Grid (UI Reference 3) -->
@@ -209,7 +184,7 @@
             <strong>Sales Contacts:</strong><br>
             Phone: <a href="tel:9821441071" style="color: #79A9C9;">+91 98214 41071</a> / <a href="tel:8828068873" style="color: #79A9C9;">88280 68873</a><br>
             Email: <a href="mailto:goodlucknutbol@gmail.com" style="color: #79A9C9;">goodlucknutbol@gmail.com</a><br>
-            Google Profile: <a href="https://share.google/fnx7M4NKP5fzHsoLj" target="_blank" rel="noopener noreferrer" style="color: #60A5FA;">View Reviews & Maps ★</a>
+            Google Profile: <a href="https://share.google/hFtLFiSH9dYBeKDcI" target="_blank" rel="noopener noreferrer" style="color: #60A5FA;">View Reviews & Maps ★</a>
           </div>
         </div>
 
@@ -217,7 +192,7 @@
           <h4 class="footer-col-title">Navigation</h4>
           <ul class="footer-links">
             <li><a href="index.html" class="footer-link">Home</a></li>
-            <li><a href="products.html" class="footer-link">Products (45 Lines)</a></li>
+            <li><a href="products.html" class="footer-link">Products</a></li>
             <li><a href="request-a-quote.html" class="footer-link">Request a Quote</a></li>
             <li><a href="about.html" class="footer-link">About Us (Est. 1975)</a></li>
             <li><a href="industries.html" class="footer-link">Industries & Applications</a></li>
