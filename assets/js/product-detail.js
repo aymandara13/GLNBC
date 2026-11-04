@@ -210,15 +210,15 @@ function renderProductPage(p, container) {
                 </tr>
                 <tr style="border-bottom: 1px solid var(--color-cool-grey-border);">
                   <td style="padding: 12px 16px; font-weight: 600; background: var(--color-cool-grey-light); color: var(--color-deep-black);">Standard & Custom Grades</td>
-                  <td style="padding: 12px 16px;">${gradesHtml || 'Standard Industrial Grades'}</td>
+                  <td style="padding: 12px 16px;">${gradesHtml || 'Available on request'}</td>
                 </tr>
                 <tr style="border-bottom: 1px solid var(--color-cool-grey-border);">
                   <td style="padding: 12px 16px; font-weight: 600; background: var(--color-cool-grey-light); color: var(--color-deep-black);">Surface Finishes & Coatings</td>
-                  <td style="padding: 12px 16px;">${finishesHtml || 'Self Color, Zinc Plated, HDG'}</td>
+                  <td style="padding: 12px 16px;">${finishesHtml || 'Available on request'}</td>
                 </tr>
                 <tr style="border-bottom: 1px solid var(--color-cool-grey-border);">
                   <td style="padding: 12px 16px; font-weight: 600; background: var(--color-cool-grey-light); color: var(--color-deep-black);">Manufacturing Standards</td>
-                  <td style="padding: 12px 16px;">${standardsHtml || 'IS / DIN / ASTM / Custom Drawing'}</td>
+                  <td style="padding: 12px 16px;">${standardsHtml || 'Available on request'}</td>
                 </tr>
                 <tr style="border-bottom: 1px solid var(--color-cool-grey-border);">
                   <td style="padding: 12px 16px; font-weight: 600; background: var(--color-cool-grey-light); color: var(--color-deep-black);">Dimensions & Sizing</td>
@@ -226,7 +226,7 @@ function renderProductPage(p, container) {
                 </tr>
                 <tr>
                   <td style="padding: 12px 16px; font-weight: 600; background: var(--color-cool-grey-light); color: var(--color-deep-black);">Threading Specifications</td>
-                  <td style="padding: 12px 16px;">${escapeHtml(p.threading || 'Metric Coarse/Fine, Imperial BSW/UNC to Specification')}</td>
+                  <td style="padding: 12px 16px;">${escapeHtml(p.threading || 'Available on request')}</td>
                 </tr>
               </tbody>
             </table>

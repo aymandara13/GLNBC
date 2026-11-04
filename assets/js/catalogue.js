@@ -36,6 +36,7 @@ function initCatalogue() {
     const catButtons = document.querySelectorAll('[data-filter-category]');
     catButtons.forEach(b => {
       b.classList.toggle('active', b.dataset.filterCategory === catParam);
+      b.setAttribute('aria-pressed', String(b.dataset.filterCategory === catParam));
     });
   }
 
@@ -106,8 +107,10 @@ function setupCatalogueControls() {
   const catButtons = document.querySelectorAll('[data-filter-category]');
   catButtons.forEach(btn => {
     btn.addEventListener('click', () => {
-      catButtons.forEach(b => b.classList.remove('active'));
+      catButtons.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed', 'false'); });
       btn.classList.add('active');
+      btn.setAttribute('aria-pressed', 'true');
+      currentFilters.status = 'all';
       currentFilters.category = btn.dataset.filterCategory;
       renderCatalogue();
     });
@@ -155,7 +158,7 @@ function resetAllFilters() {
   if (searchInput) searchInput.value = '';
   updateClearButton(false);
   if (materialSelect) materialSelect.value = 'all';
-  catButtons.forEach(b => b.classList.toggle('active', b.dataset.filterCategory === 'all'));
+  catButtons.forEach(b => { b.classList.toggle('active', b.dataset.filterCategory === 'all'); b.setAttribute('aria-pressed', String(b.dataset.filterCategory === 'all')); });
   statusButtons.forEach(b => b.classList.toggle('active', b.dataset.filterStatus === 'all'));
   quickPills.forEach(p => p.classList.remove('active'));
   renderCatalogue();
@@ -212,9 +215,7 @@ function renderCatalogue() {
   });
 
   if (countElem) {
-    let tierText = `All ${GLNBC_PRODUCTS.length} Products`;
-    if (currentFilters.status === 'branded' || currentFilters.status === 'also-deal-in') tierText = 'Branded Lines';
-    countElem.textContent = `Showing ${filtered.length} of ${GLNBC_PRODUCTS.length} Industrial Products (${tierText})`;
+    countElem.textContent = `Showing ${filtered.length} of ${GLNBC_PRODUCTS.length} products`;
   }
 
   if (filtered.length === 0) {
@@ -228,9 +229,7 @@ function renderCatalogue() {
           <a href="request-a-quote.html?custom=${encodeURIComponent(currentFilters.query)}" class="btn btn-primary">
             Send Custom Requirement
           </a>
-          <button type="button" class="btn btn-whatsapp" onclick="openWhatsAppQuote('', 'Hello GLNBC, I am looking for: ${escapeHtml(currentFilters.query)}')">
-            Inquire on WhatsApp
-          </button>
+          <a class="btn btn-whatsapp" href="https://wa.me/919821441071?text=${encodeURIComponent('Hello GLNBC, I am looking for: ' + currentFilters.query)}" target="_blank" rel="noopener noreferrer">Inquire on WhatsApp</a>
           <button type="button" class="btn btn-outline" onclick="resetAllFilters()">Clear Filters</button>
         </div>
       </div>
@@ -241,7 +240,7 @@ function renderCatalogue() {
   let html = '';
   filtered.forEach(prod => {
     const isBranded = prod.visibilityTier === 'Branded' || prod.visibilityTier === 'Also Deal In';
-    const firstMaterial = (prod.materials && prod.materials[0]) ? prod.materials[0] : 'Mild / Stainless Steel';
+    const firstMaterial = (prod.materials && prod.materials[0]) ? prod.materials[0] : 'Available on request';
     const allImages = [prod.heroImage, ...(prod.galleryImages || [])].filter(Boolean);
     
     // Multi-Image Flipper Arrows Markup
@@ -264,6 +263,8 @@ function renderCatalogue() {
           ${counterMarkup}
         </div>
       `;
+    } else {
+      imageMarkup = `<div class="product-card-media product-image-placeholder"><span>Photo available on request</span></div>`;
     }
 
     let brandBadge = '';
@@ -310,4 +311,5 @@ function renderCatalogue() {
   });
 
   grid.innerHTML = html;
+  if (typeof observeReveals === 'function') observeReveals(grid);
 }

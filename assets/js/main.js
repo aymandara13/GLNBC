@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initAccordions();
   initGlobalSearch();
   initHeroSlider();
+  initContactForm();
+  requestAnimationFrame(() => observeReveals(document));
 });
 
 // ==========================================
@@ -21,21 +23,36 @@ function initMobileNav() {
 
   if (!toggleBtn || !drawer || !overlay) return;
 
+  drawer.setAttribute('aria-hidden', 'true');
+  drawer.inert = true;
+  toggleBtn.setAttribute('aria-expanded', 'false');
+
   function openMenu() {
+    drawer.inert = false;
+    drawer.setAttribute('aria-hidden', 'false');
+    toggleBtn.setAttribute('aria-expanded', 'true');
     drawer.classList.add('active');
     overlay.classList.add('active');
     document.body.style.overflow = 'hidden';
+    if (closeBtn) closeBtn.focus();
   }
 
   function closeMenu() {
     drawer.classList.remove('active');
+    drawer.inert = true;
+    drawer.setAttribute('aria-hidden', 'true');
+    toggleBtn.setAttribute('aria-expanded', 'false');
     overlay.classList.remove('active');
     document.body.style.overflow = '';
+    toggleBtn.focus();
   }
 
   toggleBtn.addEventListener('click', openMenu);
   if (closeBtn) closeBtn.addEventListener('click', closeMenu);
   overlay.addEventListener('click', closeMenu);
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && drawer.classList.contains('active')) closeMenu();
+  });
 }
 
 // ==========================================
@@ -47,6 +64,9 @@ function initHeroSlider() {
   const prevBtn = document.querySelector('.hero-prev-btn');
   const nextBtn = document.querySelector('.hero-next-btn');
   const wrapper = document.querySelector('.hero-slider-wrapper');
+  const pauseBtn = document.querySelector('.hero-pause-btn');
+  const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let paused = motionPreference.matches;
 
   if (!slides.length) return;
 
@@ -56,9 +76,11 @@ function initHeroSlider() {
   function goToSlide(index) {
     slides.forEach((s, idx) => {
       s.classList.toggle('active', idx === index);
+      s.setAttribute('aria-hidden', String(idx !== index));
     });
     dots.forEach((d, idx) => {
       d.classList.toggle('active', idx === index);
+      d.setAttribute('aria-pressed', String(idx === index));
     });
     currentSlide = index;
   }
@@ -75,7 +97,7 @@ function initHeroSlider() {
 
   function startAutoPlay() {
     stopAutoPlay();
-    slideInterval = setInterval(nextSlide, 5000);
+    if (!paused && !document.hidden) slideInterval = setInterval(nextSlide, 6500);
   }
 
   function stopAutoPlay() {
@@ -108,6 +130,15 @@ function initHeroSlider() {
     wrapper.addEventListener('mouseleave', startAutoPlay);
   }
 
+  if (pauseBtn) {
+    const updatePause = () => { pauseBtn.textContent = paused ? 'Play' : 'Pause'; pauseBtn.setAttribute('aria-label', paused ? 'Play slideshow' : 'Pause slideshow'); };
+    updatePause();
+    pauseBtn.addEventListener('click', () => { paused = !paused; updatePause(); startAutoPlay(); });
+  }
+  wrapper.addEventListener('focusin', stopAutoPlay);
+  wrapper.addEventListener('focusout', event => { if (!wrapper.contains(event.relatedTarget)) startAutoPlay(); });
+  document.addEventListener('visibilitychange', () => document.hidden ? stopAutoPlay() : startAutoPlay());
+  goToSlide(0);
   startAutoPlay();
 }
 
@@ -153,6 +184,37 @@ window.openProductPage = function(prodSlug) {
   window.location.href = `product.html?p=${encodeURIComponent(prodSlug)}`;
 };
 
+
+// Subtle entrance motion without hiding content if scripts or animation are unavailable.
+let revealObserver;
+function observeReveals(root) {
+  if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!revealObserver) revealObserver = new IntersectionObserver(entries => entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-revealed');
+      revealObserver.unobserve(entry.target);
+    }
+  }), { threshold: 0.12 });
+  root.querySelectorAll('.technical-card, .product-card, .google-profile-strip').forEach(element => {
+    if (!element.dataset.revealObserved) { element.dataset.revealObserved = 'true'; revealObserver.observe(element); }
+  });
+}
+
+function initContactForm() {
+  const form = document.getElementById('contact-quick-form');
+  if (!form) return;
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+    const fields = new FormData(form);
+    const message = ['Hello GLNBC, I have an enquiry.', `Name: ${fields.get('name')}`, `Phone: ${fields.get('phone')}`,
+      fields.get('email') ? `Email: ${fields.get('email')}` : '', `Preferred branch: ${fields.get('branch')}`,
+      fields.get('message') ? `Requirement: ${fields.get('message')}` : ''].filter(Boolean).join('\n');
+    const number = typeof GLNBC_COMPANY !== 'undefined' ? GLNBC_COMPANY.contacts.whatsappPrimary : '919821441071';
+    window.open(`https://wa.me/${number}?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
+  });
+}
+
 // ==========================================
 // Accordions (FAQ & Branded Ranges)
 // ==========================================
@@ -162,6 +224,7 @@ function initAccordions() {
   accordions.forEach(acc => {
     const header = acc.querySelector('.accordion-header');
     if (!header) return;
+    header.setAttribute('aria-expanded', String(acc.classList.contains('active')));
 
     header.addEventListener('click', () => {
       const isActive = acc.classList.contains('active');
