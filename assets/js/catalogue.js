@@ -36,6 +36,7 @@ function initCatalogue() {
     const catButtons = document.querySelectorAll('[data-filter-category]');
     catButtons.forEach(b => {
       b.classList.toggle('active', b.dataset.filterCategory === catParam);
+      b.setAttribute('aria-pressed', String(b.dataset.filterCategory === catParam));
     });
   }
 
@@ -106,8 +107,10 @@ function setupCatalogueControls() {
   const catButtons = document.querySelectorAll('[data-filter-category]');
   catButtons.forEach(btn => {
     btn.addEventListener('click', () => {
-      catButtons.forEach(b => b.classList.remove('active'));
+      catButtons.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed', 'false'); });
       btn.classList.add('active');
+      btn.setAttribute('aria-pressed', 'true');
+      currentFilters.status = 'all';
       currentFilters.category = btn.dataset.filterCategory;
       renderCatalogue();
     });
@@ -155,7 +158,7 @@ function resetAllFilters() {
   if (searchInput) searchInput.value = '';
   updateClearButton(false);
   if (materialSelect) materialSelect.value = 'all';
-  catButtons.forEach(b => b.classList.toggle('active', b.dataset.filterCategory === 'all'));
+  catButtons.forEach(b => { b.classList.toggle('active', b.dataset.filterCategory === 'all'); b.setAttribute('aria-pressed', String(b.dataset.filterCategory === 'all')); });
   statusButtons.forEach(b => b.classList.toggle('active', b.dataset.filterStatus === 'all'));
   quickPills.forEach(p => p.classList.remove('active'));
   renderCatalogue();
@@ -212,9 +215,7 @@ function renderCatalogue() {
   });
 
   if (countElem) {
-    let tierText = `All ${GLNBC_PRODUCTS.length} Products`;
-    if (currentFilters.status === 'branded' || currentFilters.status === 'also-deal-in') tierText = 'Branded Lines';
-    countElem.textContent = `Showing ${filtered.length} of ${GLNBC_PRODUCTS.length} Industrial Products (${tierText})`;
+    countElem.textContent = `Showing ${filtered.length} of ${GLNBC_PRODUCTS.length} products`;
   }
 
   if (filtered.length === 0) {
@@ -264,6 +265,8 @@ function renderCatalogue() {
           ${counterMarkup}
         </div>
       `;
+    } else {
+      imageMarkup = `<div class="product-card-media product-image-placeholder"><span>Photo available on request</span></div>`;
     }
 
     let brandBadge = '';
