@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Request a Quote | Good Luck Nut Bolt Corporation (GLNBC) Mumbai</title>
-  <meta name="description" content="Submit your industrial fastener and U-bolt requirements. Multi-component RFQ builder, custom drawing upload, and direct WhatsApp quote generator.">
+  <meta name="description" content="Submit your industrial fastener and U-bolt requirements. Build a multi-component quote request and send it to GLNBC through WhatsApp.">
   <meta name="keywords" content="fasteners quote Mumbai, U-bolts quotation, nuts bolts RFQ, industrial hardware quote, custom fastener quote">
   
   <link rel="icon" type="image/png" href="assets/images/brand/favicon.png">
@@ -93,7 +93,7 @@
           Request an Industrial Quotation
         </h1>
         <p style="color: var(--color-text-dim); max-width: 680px; font-size: 15px;">
-          Submit your single or multi-component requirements. You can also upload sketches, engineering drawings, or generate an instant formatted WhatsApp quotation.
+          Prepare your single or multi-component requirements and send them via WhatsApp. You can attach drawings or photos in WhatsApp.
         </p>
       </div>
     </section>
@@ -177,27 +177,11 @@
             </button>
           </div>
 
-          <!-- Section 2: Drawing / Photo Upload -->
-          <h2 style="font-size: 20px; margin-bottom: 8px; border-bottom: 1px solid var(--color-cool-grey-border); padding-bottom: 12px;">
-            2. Drawing, Sketch or Photo (Optional)
-          </h2>
-          <div class="form-group">
-            <div class="file-upload-box" id="drawing-dropzone">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin: 0 auto 8px auto; color: var(--color-industrial-blue);"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
-              <div style="font-weight: 600; color: var(--color-deep-black); font-size: 14px;">
-                Drag and drop your engineering drawing, PDF, or sample photograph here
-              </div>
-              <div style="font-size: 12px; color: var(--color-grey-muted); margin-top: 4px;">
-                Supported formats: PDF, JPG, PNG, CAD/DXF (Max: 15MB)
-              </div>
-              <input type="file" id="drawing-file-input" style="display: none;" accept=".pdf,.png,.jpg,.jpeg,.dxf">
-              <div id="file-preview-name"></div>
-            </div>
-          </div>
+          <div class="drawing-note"><strong>Have a drawing or photo?</strong><p>After WhatsApp opens, attach it directly to your message before sending.</p></div>
 
           <!-- Section 3: Contact & Delivery Info -->
           <h2 style="font-size: 20px; margin-top: 32px; margin-bottom: 8px; border-bottom: 1px solid var(--color-cool-grey-border); padding-bottom: 12px;">
-            3. Contact & Delivery Information
+            2. Contact & Delivery Information
           </h2>
 
           <div class="form-row form-row-2">
@@ -232,15 +216,7 @@
             <textarea class="form-control" id="notes-input" name="client_notes" placeholder="Describe specific threading requirements, test certificate needs, intended application, or special requests..."></textarea>
           </div>
 
-          <!-- Submission CTAs -->
-          <div style="display: flex; gap: 16px; margin-top: 24px; flex-wrap: wrap;">
-            <button type="submit" class="btn btn-lg btn-primary" style="flex: 2; min-width: 220px;">
-              Submit Online RFQ
-            </button>
-            <button type="button" id="btn-quote-whatsapp" class="btn btn-lg btn-whatsapp" style="flex: 2; min-width: 220px;">
-              Generate WhatsApp Quote
-            </button>
-          </div>
+          <div class="quote-actions"><button type="submit" class="btn btn-lg btn-whatsapp">Continue to WhatsApp</button><p>Your message opens in WhatsApp for you to review and send.</p></div>
         </form>
       </div>
     </section>
@@ -257,7 +233,9 @@
     <option value="Bitumen Washers (Dambar)"></option>
     <option value="Button Head Screws"></option>
     <option value="C-Channel Brackets / C Patti"></option>
-    <option value="Countersunk (CSK) Bolts"></option>
+    <option value="Allen CSK Bolts"></option>
+    <option value="Phillips CSK Bolts"></option>
+    <option value="Grub Screws"></option>
     <option value="Countersunk (CSK) Screws"></option>
     <option value="Eye Bolts"></option>
     <option value="Eye Nuts"></option>
@@ -294,27 +272,6 @@
     <option value="Double-Wire Hose Clamps"></option>
     <option value="Cement Nails"></option>
   </datalist>
-
-  <!-- RFQ Success Modal -->
-  <div id="rfq-success-modal" class="mobile-drawer-overlay" style="display: flex; align-items: center; justify-content: center; padding: 20px;">
-    <div style="background: white; border-radius: var(--radius-lg); max-width: 520px; width: 100%; padding: 32px; box-shadow: var(--shadow-lg); border: 2px solid var(--color-industrial-blue);">
-      <div style="text-align: center; margin-bottom: 20px;">
-        <div style="width: 54px; height: 54px; background-color: var(--color-success-bg); color: var(--color-success); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px auto;">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-        </div>
-        <h3 style="font-size: 22px;">Quotation Request Recorded</h3>
-      </div>
-      <div id="modal-summary-text"></div>
-      <div style="margin-top: 24px; display: flex; flex-direction: column; gap: 10px;">
-        <button type="button" class="btn btn-whatsapp w-full" onclick="document.getElementById('btn-quote-whatsapp').click()">
-          Open & Send via WhatsApp Now
-        </button>
-        <button type="button" class="btn btn-outline w-full" onclick="document.getElementById('rfq-success-modal').classList.remove('active'); window.location.href='index.html';">
-          Return to Homepage
-        </button>
-      </div>
-    </div>
-  </div>
 
   <!-- Footer with High-Visibility Logo -->
   <footer class="site-footer">
