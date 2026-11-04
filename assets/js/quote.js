@@ -17,7 +17,7 @@ function initQuoteForm() {
 
   // Check URL params for prefilled product or custom requirement
   const urlParams = new URLSearchParams(window.location.search);
-  const prefillProduct = urlParams.get('p');
+  const prefillProduct = urlParams.get('product') || urlParams.get('p');
   const customQuery = urlParams.get('custom');
 
   if (prefillProduct) {
@@ -38,22 +38,12 @@ function initQuoteForm() {
     });
   }
 
-  // File Upload Handler
-  initFileUpload();
-
   // Form Submit
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    handleQuoteSubmission(form);
+    sendViaWhatsApp(form);
   });
 
-  // Direct WhatsApp Button
-  const waBtn = document.getElementById('btn-quote-whatsapp');
-  if (waBtn) {
-    waBtn.addEventListener('click', () => {
-      sendViaWhatsApp(form);
-    });
-  }
 }
 
 function addComponentRow(index, container) {
@@ -119,50 +109,6 @@ function removeComponentRow(index) {
   if (row) row.remove();
 }
 
-function initFileUpload() {
-  const dropZone = document.getElementById('drawing-dropzone');
-  const fileInput = document.getElementById('drawing-file-input');
-  const filePreview = document.getElementById('file-preview-name');
-
-  if (!dropZone || !fileInput) return;
-
-  dropZone.addEventListener('click', () => fileInput.click());
-
-  dropZone.addEventListener('dragover', (e) => {
-    e.preventDefault();
-    dropZone.classList.add('dragover');
-  });
-
-  dropZone.addEventListener('dragleave', () => {
-    dropZone.classList.remove('dragover');
-  });
-
-  dropZone.addEventListener('drop', (e) => {
-    e.preventDefault();
-    dropZone.classList.remove('dragover');
-    if (e.dataTransfer.files.length) {
-      fileInput.files = e.dataTransfer.files;
-      updateFilePreview(fileInput.files[0], filePreview);
-    }
-  });
-
-  fileInput.addEventListener('change', () => {
-    if (fileInput.files.length) {
-      updateFilePreview(fileInput.files[0], filePreview);
-    }
-  });
-}
-
-function updateFilePreview(file, previewElem) {
-  if (!previewElem || !file) return;
-  const sizeKb = Math.round(file.size / 1024);
-  previewElem.innerHTML = `
-    <div style="margin-top: 10px; padding: 8px 12px; background: var(--color-blue-subtle); border-radius: 4px; display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: var(--color-industrial-blue);">
-      <span>Attached: ${escapeHtml(file.name)} (${sizeKb} KB)</span>
-    </div>
-  `;
-}
-
 function extractFormData(form) {
   const name = form.querySelector('#client-name')?.value.trim() || '';
   const phone = form.querySelector('#client-phone')?.value.trim() || '';
@@ -225,40 +171,16 @@ function buildWhatsAppMessage(data) {
 function sendViaWhatsApp(form) {
   const data = extractFormData(form);
   if (!data.name || !data.phone) {
-    showToast('Please provide your Name and Phone Number to generate WhatsApp Quote.', 'warning');
+    window.alert('Please provide your name and phone number.');
     return;
   }
   if (!data.components.length) {
-    showToast('Please add at least one component requirement.', 'warning');
+    window.alert('Please add at least one component requirement.');
     return;
   }
 
   const msg = buildWhatsAppMessage(data);
   const targetPhone = (typeof GLNBC_COMPANY !== 'undefined') ? GLNBC_COMPANY.contacts.whatsappPrimary : '919821441071';
   const url = `https://wa.me/${targetPhone}?text=${encodeURIComponent(msg)}`;
-  window.open(url, '_blank');
-}
-
-function handleQuoteSubmission(form) {
-  const data = extractFormData(form);
-  if (!data.name || !data.phone) {
-    showToast('Please fill in required fields (Name & Phone).', 'warning');
-    return;
-  }
-
-  const modalRoot = document.getElementById('rfq-success-modal');
-  if (modalRoot) {
-    const summaryElem = document.getElementById('modal-summary-text');
-    if (summaryElem) {
-      summaryElem.innerHTML = `
-        <p><strong>Thank you, ${escapeHtml(data.name)}.</strong> Your quotation request for <strong>${data.components.length} item(s)</strong> has been compiled.</p>
-        <p style="margin-top: 8px; font-size: 13px; color: var(--color-text-muted);">
-          Our sales team at Good Luck Nut Bolt Corporation (Kumbharwada & Nagdevi) will review the specifications and reply promptly on <strong>${escapeHtml(data.phone)}</strong>.
-        </p>
-      `;
-    }
-    modalRoot.classList.add('active');
-  } else {
-    showToast('Quote compiled successfully! Our team will contact you shortly.', 'success');
-  }
+  window.open(url, '_blank', 'noopener');
 }
